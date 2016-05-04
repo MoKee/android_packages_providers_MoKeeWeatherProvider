@@ -1,0 +1,3 @@
+# Needed when building against the Marshmallow SDK
+-dontwarn net.sqlcipher.**
+-keep class net.sqlcipher.** { *;}
