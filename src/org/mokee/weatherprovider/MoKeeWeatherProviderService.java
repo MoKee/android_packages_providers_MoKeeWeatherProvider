@@ -408,8 +408,8 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 String countryID = "0086";
 
                 if (searchText.equals(districtEN) || searchText.equals(nameEN)) {
-                    WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameEN)
-                            .setCountry(nationEN).setCountryId(countryID).build();
+                    WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameCN)
+                            .setCountry(nationCN).setCountryId(countryID).build();
                     results.add(weatherLocation);
                 } else if (searchText.equals(districtCN) || searchText.equals(nameCN)) {
                     WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameCN)
