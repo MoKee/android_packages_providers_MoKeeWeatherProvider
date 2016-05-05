@@ -52,6 +52,29 @@ public class HttpRetriever {
         return response;
     }
 
+    public static String retrieve(String url) {
+        URL targetURL;
+        try {
+            targetURL = new URL(url);
+        } catch (MalformedURLException e) {
+            return null;
+        }
+        HttpURLConnection urlConnection = null;
+        String response;
+        try {
+            urlConnection = (HttpURLConnection) targetURL.openConnection();
+            urlConnection.setRequestMethod("GET");
+            urlConnection.setDoInput(true);
+            urlConnection.connect();
+            response = readStream(urlConnection.getInputStream());
+        } catch (IOException e) {
+            return null;
+        } finally {
+            if (urlConnection != null) urlConnection.disconnect();
+        }
+        return response;
+    }
+
     private static String readStream(InputStream inputStream) {
         BufferedReader br;
         br = new BufferedReader(new InputStreamReader(inputStream));

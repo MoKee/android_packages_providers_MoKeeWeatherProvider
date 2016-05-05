@@ -17,10 +17,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/prefscreen_category_about_title">
         <Preference
-                android:key="location"
-                android:title="@string/prefscreen_location_title"
-                android:summary="@string/prefscreen_location_summary"/>
-        <Preference
                 android:key="copyright"
                 android:title="@string/prefscreen_copyright_title"
                 android:summary="@string/prefscreen_copyright_summary"/>

@@ -18,6 +18,7 @@ package org.mokee.weatherprovider;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import org.json.JSONArray;
@@ -28,6 +29,7 @@ import android.content.Context;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.SystemClock;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.mokee.security.RSAUtils;
@@ -54,6 +56,9 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
 
     private static final String MOKEE_API_MAIN_NODE = "MoKeeWeather data service 1.0";
 
+    private static final String URL_PARAM_LATITUDE_LONGITUDE = "lat=%f&lon=%f";
+    private static final String URL_PARAM_CITY_ID = "id=%s";
+
     private static final String URL_WEATHER =
             "http://cloud.mokeedev.com/weather/getWeatherByCityID";
 
@@ -63,8 +68,8 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
     //MoKeeWeather recommends to wait 10 min between requests
     private final static long REQUEST_THRESHOLD = 1000L * 60L * 10L;
     private long mLastRequestTimestamp = -REQUEST_THRESHOLD;
-    private WeatherLocation mLastWeatherLocation;
-    private Location mLastLocation;
+    public static WeatherLocation mLastWeatherLocation;
+    public static Location mLastLocation;
     //5km of threshold, the weather won't change that much in such short distance
     private static final float LOCATION_DISTANCE_METERS_THRESHOLD = 5f * 1000f;
 
@@ -120,8 +125,8 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             mRequest = request;
         }
 
-        public WeatherInfo.Builder getWeatherInfo(Location location, boolean metric) {
-            StringBuffer params =new StringBuffer();
+        public WeatherInfo getWeatherInfo(Location location, boolean metric) {
+            StringBuffer params = new StringBuffer();
             params.append("ak=").append(MoKeeWeatherApplication.API_KEY)
             .append("&callback=renderReverse&output=json&pois=1&")
             .append("location=").append(location.getLatitude()).append(",")
@@ -129,28 +134,41 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             String locationResponse = HttpRetriever.retrieve(MoKeeWeatherApplication.URL_PLACEFINDER, params.toString());
             if (locationResponse != null) {
                 try {
-                    String cityName = new JSONObject(locationResponse).getJSONObject("result")
-                            .getJSONObject("addressComponent").getString("city").replace("市", "");
-                    DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
-                    SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
-                    Cursor cursor = sqLiteDatabase.query("weathers", DatabaseContracts.PROJECTION,
-                            "NAMECN like '" + cityName + "' or DISTRICTCN like '" + cityName + "'", null, null, null, null);
-
-                    while (cursor.moveToNext()) {
-                        String areaID = cursor.getString(DatabaseContracts.AREAID_INDEX);
+                    JSONObject address = new JSONObject(locationResponse).getJSONObject("result").getJSONObject("addressComponent");
+                    String cityName = address.getString("city");
+                    String areaID = "";
+                    if (!cityName.isEmpty() && address.getInt("country_code") == 0) {
+                        if (cityName.length() > 2) {
+                            cityName = cityName.replace("市", "");
+                        }
+                        DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
+                        SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
+                        Cursor cursor = sqLiteDatabase.query("weathers", DatabaseContracts.PROJECTION,
+                                "NAMECN like '" + cityName + "' or DISTRICTCN like '" + cityName + "'", null, null, null, "1");
+                        while (cursor.moveToNext()) {
+                            areaID = cursor.getString(DatabaseContracts.AREAID_INDEX);
+                        }
                         cursor.close();
                         sqLiteDatabase.close();
-                        return getWeatherInfo(areaID, cityName, metric);
+                        if (!TextUtils.isEmpty(areaID)) {
+                            return getWeatherInfo(areaID, cityName, metric);
+                        } else {
+                            return null;
+                        }
+                    } else {
+                        String selection = String.format(Locale.US, URL_PARAM_LATITUDE_LONGITUDE,
+                                mRequest.getRequestInfo().getLocation().getLatitude(),
+                                mRequest.getRequestInfo().getLocation().getLongitude());
+                        return GlobalWeatherProvider.getWeatherInfo(mContext, mRequest, selection);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-
             return null;
         }
 
-        public WeatherInfo.Builder getWeatherInfo(String id, String localizedCityName, boolean metric) {
+        public WeatherInfo getWeatherInfo(String id, String localizedCityName, boolean metric) {
             StringBuffer params = new StringBuffer();
             try {
                 String cityID = RSAUtils.rsaEncryptByPublicKey(id);
@@ -165,7 +183,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     JSONObject main = weather.getJSONObject("now");
                     ArrayList<DayForecast> forecasts = parseForecasts(weather.getJSONArray("daily_forecast"), true);
                     WeatherInfo.Builder weatherInfo = new WeatherInfo.Builder(localizedCityName,
-                            sanitizeTemperature(main.getDouble("tmp"), metric), metric ? WeatherContract.WeatherColumns.TempUnit.CELSIUS :
+                            GlobalWeatherProvider.sanitizeTemperature(main.getDouble("tmp"), metric), metric ? WeatherContract.WeatherColumns.TempUnit.CELSIUS :
                             WeatherContract.WeatherColumns.TempUnit.FAHRENHEIT);
                     weatherInfo.setWind(main.getJSONObject("wind").getDouble("spd"), main.getJSONObject("wind").getDouble("deg"), WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
                     weatherInfo.setHumidity(main.getDouble("hum"));
@@ -184,13 +202,11 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                         mLastLocation = mRequest.getRequestInfo().getLocation();
                         mLastWeatherLocation = null;
                     }
-
-                    return weatherInfo;
+                    return weatherInfo.build();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-
             return null;
         }
 
@@ -198,11 +214,16 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
         protected WeatherInfo doInBackground(Void... params) {
             if (mRequest.getRequestInfo().getRequestType()
                     == RequestInfo.TYPE_WEATHER_BY_WEATHER_LOCATION_REQ) {
-                return getWeatherInfo(mRequest.getRequestInfo().getWeatherLocation().getCityId(),
-                        mRequest.getRequestInfo().getWeatherLocation().getCity(), true).build();
+                String CityId = mRequest.getRequestInfo().getWeatherLocation().getCityId();
+                if (mRequest.getRequestInfo().getWeatherLocation().getCountryId().equals("0086")) {
+                    return getWeatherInfo(CityId, mRequest.getRequestInfo().getWeatherLocation().getCity(), true);
+                } else {
+                    String selection = String.format(Locale.US, URL_PARAM_CITY_ID, CityId);
+                    return GlobalWeatherProvider.getWeatherInfo(mContext, mRequest, selection);
+                }
             } else if (mRequest.getRequestInfo().getRequestType()
                     == RequestInfo.TYPE_WEATHER_BY_GEO_LOCATION_REQ) {
-                return getWeatherInfo(mRequest.getRequestInfo().getLocation(), true).build();
+                return getWeatherInfo(mRequest.getRequestInfo().getLocation(), true);
             } else {
                 return null;
             }
@@ -220,27 +241,11 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 JSONObject forecast = forecasts.getJSONObject(i);
                 int weatherID = forecast.getJSONObject("cond").getInt("code_d");
                 DayForecast item = new DayForecast.Builder(mapConditionIconToCode(weatherID))
-                        .setLow(sanitizeTemperature(forecast.getJSONObject("tmp").getDouble("min"), metric))
-                        .setHigh(sanitizeTemperature(forecast.getJSONObject("tmp").getDouble("max"), metric)).build();
+                        .setLow(GlobalWeatherProvider.sanitizeTemperature(forecast.getJSONObject("tmp").getDouble("min"), metric))
+                        .setHigh(GlobalWeatherProvider.sanitizeTemperature(forecast.getJSONObject("tmp").getDouble("max"), metric)).build();
                 result.add(item);
             }
             return result;
-        }
-
-        // MoKeeWeather sometimes returns temperatures in Kelvin even if we ask it
-        // for deg C or deg F. Detect this and convert accordingly.
-        private double sanitizeTemperature(double value, boolean metric) {
-            // threshold chosen to work for both C and F. 170 deg F is hotter
-            // than the hottest place on earth.
-            if (value > 170d) {
-                // K -> deg C
-                value -= 273.15d;
-                if (!metric) {
-                    // deg C -> deg F
-                    value = (value * 1.8d) + 32d;
-                }
-            }
-            return value;
         }
 
         private int mapConditionIconToCode(int conditionId) {
@@ -407,13 +412,16 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                             .setCountry(nationEN).setCountryId(countryID).build();
                     results.add(weatherLocation);
                 } else if (searchText.equals(districtCN) || searchText.equals(nameCN)) {
-                    WeatherLocation weatherLocation =  new WeatherLocation.Builder(areaID, nameCN)
+                    WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameCN)
                             .setCountry(nationCN).setCountryId(countryID).build();
                     results.add(weatherLocation);
                 }
             }
             cursor.close();
             sqLiteDatabase.close();
+            if (results.size() == 0) {
+                return GlobalWeatherProvider.getLocations(mContext, input);
+            }
             return results;
         }
     }

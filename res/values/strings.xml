@@ -18,11 +18,9 @@
     <string name="app_name" translatable="false">MoKeeWeather</string>
     <string name="prefscreen_category_about_title">About</string>
 
-    <string name="prefscreen_location_title">Location</string>
-    <string name="prefscreen_location_summary">China only, worldwide coming soon.</string>
     <!-- Copyright and disclaimers -->
     <string name="prefscreen_copyright_title">Disclaimer</string>
     <string name="prefscreen_copyright_summary">The information provided by this application is provided for general information purposes only and does not claim to be or constitute legal or other professional advice and shall not be relied upon %1$s nor the provider of this application as such.</string>
-    <string name="mokeeweather_inc_name" translatable="false">HeWeather Inc.</string>
+    <string name="mokeeweather_inc_name" translatable="false">HeWeather and OpenWeatherMap Inc.</string>
 
 </resources>
