@@ -192,7 +192,9 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     weatherInfo.setTodaysHigh(forecasts.get(0).getHigh());
                     weatherInfo.setTimestamp(System.currentTimeMillis());
                     weatherInfo.setWeatherCondition(mapConditionIconToCode(main.getJSONObject("cond").getInt("code")));
-                    weatherInfo.setAqi(aqi.getString("aqi") + " " + aqi.getString("qlty"));
+                    if (aqi.has("aqi")) {
+                        weatherInfo.setAqi(aqi.getString("aqi") + " " + aqi.getString("qlty"));
+                    }
                     weatherInfo.setForecast(forecasts);
 
                     if (mRequest.getRequestInfo().getRequestType()
@@ -405,7 +407,6 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 String nameEN = cursor.getString(DatabaseContracts.NAMEEN_INDEX);
                 String districtEN = cursor.getString(DatabaseContracts.DISTRICTEN_INDEX);
                 String districtCN = cursor.getString(DatabaseContracts.DISTRICTCN_INDEX);
-                String nationEN = cursor.getString(DatabaseContracts.NATIONEN_INDEX);
                 String nationCN = cursor.getString(DatabaseContracts.NATIONCN_INDEX);
                 String countryID = "0086";
 
