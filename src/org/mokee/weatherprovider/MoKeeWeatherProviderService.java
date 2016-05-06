@@ -181,7 +181,6 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 try {
                     JSONObject weather = new JSONObject(forecastResponse).getJSONArray(MOKEE_API_MAIN_NODE).getJSONObject(0);
                     JSONObject main = weather.getJSONObject("now");
-                    JSONObject aqi = weather.getJSONObject("aqi").getJSONObject("city");
                     ArrayList<DayForecast> forecasts = parseForecasts(weather.getJSONArray("daily_forecast"), true);
                     WeatherInfo.Builder weatherInfo = new WeatherInfo.Builder(localizedCityName,
                             GlobalWeatherProvider.sanitizeTemperature(main.getDouble("tmp"), metric), metric ? WeatherContract.WeatherColumns.TempUnit.CELSIUS :
@@ -192,13 +191,14 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     weatherInfo.setTodaysHigh(forecasts.get(0).getHigh());
                     weatherInfo.setTimestamp(System.currentTimeMillis());
                     weatherInfo.setWeatherCondition(mapConditionIconToCode(main.getJSONObject("cond").getInt("code")));
-                    if (aqi.has("aqi")) {
-                        StringBuilder apiInfo = new StringBuilder();
-                        apiInfo.append(aqi.getString("aqi"));
+                    if (weather.has("aqi")) {
+                        JSONObject aqi = weather.getJSONObject("aqi").getJSONObject("city");
+                        StringBuilder aqiInfo = new StringBuilder();
+                        aqiInfo.append(aqi.getString("aqi"));
                         if (aqi.has("qtly")) {
-                            apiInfo.append(" ").append(aqi.getString("qlty"));
+                            aqiInfo.append(" ").append(aqi.getString("qlty"));
                         }
-                        weatherInfo.setAqi(apiInfo.toString());
+                        weatherInfo.setAqi(aqiInfo.toString());
                     }
                     weatherInfo.setForecast(forecasts);
 
