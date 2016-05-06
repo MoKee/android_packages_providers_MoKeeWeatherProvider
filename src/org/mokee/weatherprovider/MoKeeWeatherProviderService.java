@@ -193,7 +193,12 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     weatherInfo.setTimestamp(System.currentTimeMillis());
                     weatherInfo.setWeatherCondition(mapConditionIconToCode(main.getJSONObject("cond").getInt("code")));
                     if (aqi.has("aqi")) {
-                        weatherInfo.setAqi(aqi.getString("aqi") + " " + aqi.getString("qlty"));
+                        StringBuilder apiInfo = new StringBuilder();
+                        apiInfo.append(aqi.getString("aqi"));
+                        if (aqi.has("qtly")) {
+                            apiInfo.append(" ").append(aqi.getString("qlty"));
+                        }
+                        weatherInfo.setAqi(apiInfo.toString());
                     }
                     weatherInfo.setForecast(forecasts);
 
