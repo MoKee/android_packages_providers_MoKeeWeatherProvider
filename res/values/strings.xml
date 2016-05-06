@@ -26,6 +26,13 @@
     <string name="aqi_level_5">Very Unhealthy</string>
     <string name="aqi_level_6">Hazardous</string>
 
+    <string name="uv">UV Index</string>
+    <string name="uv_level_1">Low</string>
+    <string name="uv_level_2">Modernate</string>
+    <string name="uv_level_3">High</string>
+    <string name="uv_level_4">Very high</string>
+    <string name="uv_level_5">Extreme</string>
+
     <!-- Copyright and disclaimers -->
     <string name="prefscreen_copyright_title">Disclaimer</string>
     <string name="prefscreen_copyright_summary">The information provided by this application is provided for general information purposes only and does not claim to be or constitute legal or other professional advice and shall not be relied upon %1$s nor the provider of this application as such.</string>

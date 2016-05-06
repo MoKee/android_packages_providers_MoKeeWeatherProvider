@@ -54,6 +54,8 @@ public class GlobalWeatherProvider {
             "http://api.openweathermap.org/data/2.5/forecast/daily?" +
                     "%s&mode=json&units=%s&lang=%s&cnt=" + FORECAST_DAYS + "&appid=%s";
 
+    private static final String URL_UV_INDEX = "http://api.owm.io/air/1.0/uvi/current?lat=%s&lon=%s&%s";
+
     public static WeatherInfo getWeatherInfo(Context context, ServiceRequest mRequest, String selection) {
         String locale = getLanguageCode(context);
 
@@ -119,6 +121,17 @@ public class GlobalWeatherProvider {
             } else if (mRequest.getRequestInfo().getRequestType()
                     == RequestInfo.TYPE_WEATHER_BY_GEO_LOCATION_REQ) {
                 MoKeeWeatherProviderService.mLastLocation = mRequest.getRequestInfo().getLocation();
+                if (MoKeeWeatherProviderService.mLastLocation != null) {
+                    String uvIndexURL = String.format(Locale.US, URL_UV_INDEX, MoKeeWeatherProviderService.mLastLocation.getLatitude(),
+                            MoKeeWeatherProviderService.mLastLocation.getLongitude(), mAPIKey);
+                    String currentUVResponse = HttpRetriever.retrieve(uvIndexURL);
+                    if (!TextUtils.isEmpty(currentUVResponse)) {
+                        JSONObject uvIndex = new JSONObject(currentUVResponse);
+                        if (uvIndex.has("value")) {
+                            weatherInfo.setUv(getUVLevelName(context, uvIndex.getDouble("value")));
+                        }
+                    }
+                }
                 MoKeeWeatherProviderService.mLastWeatherLocation = null;
             }
 
@@ -348,6 +361,23 @@ public class GlobalWeatherProvider {
             }
         }
         return value;
+    }
+
+    private static String getUVLevelName(Context context, double index) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(context.getString(R.string.uv)).append(" ");
+        if (index < 3) {
+            stringBuilder.append(context.getString(R.string.uv_level_1));
+        } else if (index >= 3 && index < 6) {
+            stringBuilder.append(context.getString(R.string.uv_level_2));
+        } else if (index >= 6 && index < 8) {
+            stringBuilder.append(context.getString(R.string.uv_level_3));
+        } else if (index >= 8 && index < 11) {
+            stringBuilder.append(context.getString(R.string.uv_level_4));
+        } else {
+            stringBuilder.append(context.getString(R.string.uv_level_5));
+        }
+        return stringBuilder.toString();
     }
 
 }

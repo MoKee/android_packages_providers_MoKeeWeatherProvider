@@ -198,6 +198,12 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                         JSONObject aqiInfo = weather.getJSONObject("aqi").getJSONObject("city");
                         weatherInfo.setAqi(getAqiLevelName(aqiInfo.getInt("aqi")));
                     }
+                    if (weather.has("suggestion")) {
+                        JSONObject suggestion = weather.getJSONObject("suggestion");
+                        if (suggestion.has("uv")) {
+                            weatherInfo.setUv(getString(R.string.uv) + " " + suggestion.getJSONObject("uv").getString("brf"));
+                        }
+                    }
                     weatherInfo.setForecast(forecasts);
 
                     if (mRequest.getRequestInfo().getRequestType()
