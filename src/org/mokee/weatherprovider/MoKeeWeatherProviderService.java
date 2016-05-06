@@ -181,6 +181,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 try {
                     JSONObject weather = new JSONObject(forecastResponse).getJSONArray(MOKEE_API_MAIN_NODE).getJSONObject(0);
                     JSONObject main = weather.getJSONObject("now");
+                    JSONObject aqi = weather.getJSONObject("aqi").getJSONObject("city");
                     ArrayList<DayForecast> forecasts = parseForecasts(weather.getJSONArray("daily_forecast"), true);
                     WeatherInfo.Builder weatherInfo = new WeatherInfo.Builder(localizedCityName,
                             GlobalWeatherProvider.sanitizeTemperature(main.getDouble("tmp"), metric), metric ? WeatherContract.WeatherColumns.TempUnit.CELSIUS :
@@ -191,6 +192,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     weatherInfo.setTodaysHigh(forecasts.get(0).getHigh());
                     weatherInfo.setTimestamp(System.currentTimeMillis());
                     weatherInfo.setWeatherCondition(mapConditionIconToCode(main.getJSONObject("cond").getInt("code")));
+                    weatherInfo.setAqi(aqi.getString("aqi") + " " + aqi.getString("qlty"));
                     weatherInfo.setForecast(forecasts);
 
                     if (mRequest.getRequestInfo().getRequestType()
@@ -407,11 +409,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 String nationCN = cursor.getString(DatabaseContracts.NATIONCN_INDEX);
                 String countryID = "0086";
 
-                if (searchText.equals(districtEN) || searchText.equals(nameEN)) {
-                    WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameCN)
-                            .setCountry(nationCN).setCountryId(countryID).build();
-                    results.add(weatherLocation);
-                } else if (searchText.equals(districtCN) || searchText.equals(nameCN)) {
+                if (searchText.equals(districtEN) || searchText.equals(nameEN) || searchText.equals(districtCN) || searchText.equals(nameCN)) {
                     WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameCN)
                             .setCountry(nationCN).setCountryId(countryID).build();
                     results.add(weatherLocation);
