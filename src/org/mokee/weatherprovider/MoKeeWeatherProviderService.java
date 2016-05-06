@@ -144,9 +144,10 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
                         SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
                         Cursor cursor = sqLiteDatabase.query("weathers", DatabaseContracts.PROJECTION,
-                                "NAMECN like '" + cityName + "' or DISTRICTCN like '" + cityName + "'", null, null, null, "1");
+                                "NAMECN like '" + cityName + "'", null, null, null, null);
                         while (cursor.moveToNext()) {
                             areaID = cursor.getString(DatabaseContracts.AREAID_INDEX);
+                            break;
                         }
                         cursor.close();
                         sqLiteDatabase.close();
