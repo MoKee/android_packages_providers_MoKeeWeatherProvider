@@ -110,7 +110,6 @@ public class GlobalWeatherProvider {
             weatherInfo.setTimestamp(System.currentTimeMillis());
             weatherInfo.setWeatherCondition(mapConditionIconToCode(weather.getString("icon"),
                     weather.getInt("id")));
-            forecasts.remove(0); // Don't display first day
             weatherInfo.setForecast(forecasts);
 
             if (mRequest.getRequestInfo().getRequestType()

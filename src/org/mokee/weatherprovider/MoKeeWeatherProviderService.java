@@ -201,7 +201,6 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                         }
                         weatherInfo.setAqi(aqiInfo.toString());
                     }
-                    forecasts.remove(0); // Don't display first day
                     weatherInfo.setForecast(forecasts);
 
                     if (mRequest.getRequestInfo().getRequestType()
