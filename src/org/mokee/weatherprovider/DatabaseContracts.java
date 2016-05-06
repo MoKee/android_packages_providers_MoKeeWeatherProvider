@@ -26,7 +26,6 @@ public class DatabaseContracts {
     public static final String NAMECN = "NAMECN";
     public static final String DISTRICTEN = "DISTRICTEN";
     public static final String DISTRICTCN = "DISTRICTCN";
-    public static final String NATIONEN = "NATIONEN";
     public static final String NATIONCN = "NATIONCN";
 
     public static final String[] PROJECTION = new String[] {
@@ -35,7 +34,6 @@ public class DatabaseContracts {
             NAMECN,
             DISTRICTEN,
             DISTRICTCN,
-            NATIONEN,
             NATIONCN
     };
 
@@ -44,6 +42,5 @@ public class DatabaseContracts {
     public static final int NAMECN_INDEX = 2;
     public static final int DISTRICTEN_INDEX = 3;
     public static final int DISTRICTCN_INDEX = 4;
-    public static final int NATIONEN_INDEX = 5;
-    public static final int NATIONCN_INDEX = 6;
+    public static final int NATIONCN_INDEX = 5;
 }

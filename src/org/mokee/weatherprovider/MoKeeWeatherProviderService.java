@@ -138,8 +138,10 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     String cityName = address.getString("city");
                     String areaID = "";
                     if (!cityName.isEmpty() && address.getInt("country_code") == 0) {
-                        if (cityName.length() > 2) {
+                        if (cityName.length() > 2 && cityName.endsWith("市")) {
                             cityName = cityName.replace("市", "");
+                        } else if (cityName.length() > 2 && cityName.endsWith("县")) {
+                            cityName = cityName.replace("县", "");
                         }
                         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
                         SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
@@ -193,13 +195,8 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                     weatherInfo.setTimestamp(System.currentTimeMillis());
                     weatherInfo.setWeatherCondition(mapConditionIconToCode(main.getJSONObject("cond").getInt("code")));
                     if (weather.has("aqi")) {
-                        JSONObject aqi = weather.getJSONObject("aqi").getJSONObject("city");
-                        StringBuilder aqiInfo = new StringBuilder();
-                        aqiInfo.append(aqi.getString("aqi"));
-                        if (aqi.has("qlty")) {
-                            aqiInfo.append(" ").append(aqi.getString("qlty"));
-                        }
-                        weatherInfo.setAqi(aqiInfo.toString());
+                        JSONObject aqiInfo = weather.getJSONObject("aqi").getJSONObject("city");
+                        weatherInfo.setAqi(getAqiLevelName(aqiInfo.getInt("aqi")));
                     }
                     weatherInfo.setForecast(forecasts);
 
@@ -458,4 +455,22 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
         }
     }
 
+    private String getAqiLevelName(int aqi) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(getString(R.string.aqi)).append(" ").append(aqi).append(" ");
+        if (aqi <= 50) {
+            stringBuilder.append(getString(R.string.aqi_level_1));
+        } else if (aqi >= 51 && aqi <= 100) {
+            stringBuilder.append(getString(R.string.aqi_level_2));
+        } else if (aqi >= 101 && aqi <= 150) {
+            stringBuilder.append(getString(R.string.aqi_level_3));
+        } else if (aqi >= 151 && aqi <= 200) {
+            stringBuilder.append(getString(R.string.aqi_level_4));
+        } else if (aqi >= 201 && aqi <= 300) {
+            stringBuilder.append(getString(R.string.aqi_level_5));
+        } else {
+            stringBuilder.append(getString(R.string.aqi_level_6));
+        }
+        return stringBuilder.toString();
+    }
 }
