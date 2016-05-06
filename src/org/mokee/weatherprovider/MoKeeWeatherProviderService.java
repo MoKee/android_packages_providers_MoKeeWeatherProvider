@@ -195,11 +195,12 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                         JSONObject aqi = weather.getJSONObject("aqi").getJSONObject("city");
                         StringBuilder aqiInfo = new StringBuilder();
                         aqiInfo.append(aqi.getString("aqi"));
-                        if (aqi.has("qtly")) {
+                        if (aqi.has("qlty")) {
                             aqiInfo.append(" ").append(aqi.getString("qlty"));
                         }
                         weatherInfo.setAqi(aqiInfo.toString());
                     }
+                    forecasts.remove(0); // Don't display first day
                     weatherInfo.setForecast(forecasts);
 
                     if (mRequest.getRequestInfo().getRequestType()
@@ -246,7 +247,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             if (count == 0) {
                 throw new JSONException("Empty forecasts array");
             }
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < GlobalWeatherProvider.FORECAST_DAYS; i++) {
                 JSONObject forecast = forecasts.getJSONObject(i);
                 int weatherID = forecast.getJSONObject("cond").getInt("code_d");
                 DayForecast item = new DayForecast.Builder(mapConditionIconToCode(weatherID))

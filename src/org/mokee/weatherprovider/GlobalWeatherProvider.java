@@ -44,7 +44,7 @@ public class GlobalWeatherProvider {
     private static final String TAG = GlobalWeatherProvider.class.getSimpleName();
     private static final boolean DEBUG = false;
 
-    private static final int FORECAST_DAYS = 4;
+    public static final int FORECAST_DAYS = 5;
 
     private static final String URL_LOCATION =
             "http://api.openweathermap.org/data/2.5/find?q=%s&mode=json&lang=%s&appid=%s";
@@ -110,6 +110,7 @@ public class GlobalWeatherProvider {
             weatherInfo.setTimestamp(System.currentTimeMillis());
             weatherInfo.setWeatherCondition(mapConditionIconToCode(weather.getString("icon"),
                     weather.getInt("id")));
+            forecasts.remove(0); // Don't display first day
             weatherInfo.setForecast(forecasts);
 
             if (mRequest.getRequestInfo().getRequestType()
