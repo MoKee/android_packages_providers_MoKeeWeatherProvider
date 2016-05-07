@@ -19,7 +19,7 @@
   <string name="app_name">魔趣天气</string>
   <string name="prefscreen_category_about_title">关于</string>
 
-  <string name="aqi">空气质量</string>
+  <string name="aqi">环保部</string>
   <string name="aqi_level_1">优</string>
   <string name="aqi_level_2">良</string>
   <string name="aqi_level_3">轻度污染</string>
