@@ -16,7 +16,9 @@
 
 package org.mokee.weatherprovider;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -250,6 +252,10 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             if (count == 0) {
                 throw new JSONException("Empty forecasts array");
             }
+            String firstDayTime = forecasts.getJSONObject(0).getString("date");
+            if (isYesterday(firstDayTime)) {
+                forecasts.remove(0);
+            }
             for (int i = 0; i < GlobalWeatherProvider.FORECAST_DAYS; i++) {
                 JSONObject forecast = forecasts.getJSONObject(i);
                 int weatherID = forecast.getJSONObject("cond").getInt("code_d");
@@ -459,6 +465,13 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                         + request.getRequestInfo().getRequestType());
                 break;
         }
+    }
+
+    private boolean isYesterday (String firstDayTime) throws JSONException {
+        Date date = new Date(new Date().getTime() - 24 * 60 * 60 * 1000);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String yesterDayTime = format.format(date);
+        return (firstDayTime.equals(yesterDayTime));
     }
 
     private String getAqiLevelName(int aqi) {
