@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">魔趣天气</string>
   <string name="prefscreen_category_about_title">关于</string>
-
   <string name="aqi">空气质量</string>
   <string name="aqi_level_1">优</string>
   <string name="aqi_level_2">良</string>
@@ -26,9 +25,8 @@
   <string name="aqi_level_4">中度污染</string>
   <string name="aqi_level_5">重度污染</string>
   <string name="aqi_level_6">严重污染</string>
-
   <string name="uv">紫外线</string>
-
+  <string name="uv_level_5">极端</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">免责声明</string>
 </resources>

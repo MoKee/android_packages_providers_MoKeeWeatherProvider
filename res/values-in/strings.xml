@@ -17,6 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">Perihal</string>
+  <string name="aqi_level_2">Sedang</string>
+  <string name="uv_level_5">Ekstrim</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Penolakan</string>
   <string name="prefscreen_copyright_summary">Informasi yang disediakan oleh aplikasi ini disediakan untuk tujuan informasi umum saja dan tidak mengklaim atau merupakan hukum atau nasihat profesional lainnya dan tidak dapat diandalkan atas %1$s maupun penyedia aplikasi ini.</string>
