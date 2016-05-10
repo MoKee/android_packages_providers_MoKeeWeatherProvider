@@ -29,6 +29,7 @@ import org.json.JSONObject;
 
 import android.content.Context;
 import android.location.Location;
+import android.mokee.utils.MoKeeUtils;
 import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.text.TextUtils;
@@ -137,21 +138,23 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             if (locationResponse != null) {
                 try {
                     JSONObject address = new JSONObject(locationResponse).getJSONObject("result").getJSONObject("addressComponent");
-                    String cityName = getFormattedCityName(address.getString("city"));
+                    String cityNameCn = getFormattedCityName(address.getString("city"));
+                    String cityNameEn = "";
                     String areaID = "";
-                    if (!cityName.isEmpty() && address.getInt("country_code") == 0) {
+                    if (!cityNameCn.isEmpty() && address.getInt("country_code") == 0) {
                         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
                         SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
                         Cursor cursor = sqLiteDatabase.query("weathers", DatabaseContracts.PROJECTION,
-                                "NAMECN like '" + cityName + "'", null, null, null, null);
+                                "NAMECN like '" + cityNameCn + "'", null, null, null, null);
                         while (cursor.moveToNext()) {
                             areaID = cursor.getString(DatabaseContracts.AREAID_INDEX);
+                            cityNameEn = cursor.getString(DatabaseContracts.NAMEEN_INDEX);
                             break;
                         }
                         cursor.close();
                         sqLiteDatabase.close();
                         if (!TextUtils.isEmpty(areaID)) {
-                            return getWeatherInfo(areaID, cityName, metric);
+                            return getWeatherInfo(areaID, MoKeeUtils.isSupportLanguage(false) ? cityNameCn : getFormattedCityNameLetter(cityNameEn), metric);
                         } else {
                             return null;
                         }
@@ -421,7 +424,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 String countryID = "0086";
 
                 if (searchText.equals(districtEN) || searchText.equals(nameEN) || searchText.equals(districtCN) || searchText.equals(nameCN)) {
-                    WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, nameCN)
+                    WeatherLocation weatherLocation = new WeatherLocation.Builder(areaID, MoKeeUtils.isSupportLanguage(false) ? nameCN : getFormattedCityNameLetter(nameEN))
                             .setCountry(nationCN).setCountryId(countryID).build();
                     results.add(weatherLocation);
                 }
@@ -496,5 +499,9 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
         } else {
             return cityName;
         }
+    }
+
+    private String getFormattedCityNameLetter(String cityName) {
+        return cityName.replaceFirst(cityName.substring(0, 1), cityName.substring(0, 1).toUpperCase());
     }
 }

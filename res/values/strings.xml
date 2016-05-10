@@ -18,7 +18,7 @@
     <string name="app_name">MoKeeWeather</string>
     <string name="prefscreen_category_about_title">About</string>
 
-    <string name="aqi">Air quality Index</string>
+    <string name="aqi">AIR</string>
     <string name="aqi_level_1">Good</string>
     <string name="aqi_level_2">Moderate</string>
     <string name="aqi_level_3">Unhealthy for Sensitive Groups</string>
