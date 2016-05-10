@@ -137,14 +137,9 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             if (locationResponse != null) {
                 try {
                     JSONObject address = new JSONObject(locationResponse).getJSONObject("result").getJSONObject("addressComponent");
-                    String cityName = address.getString("city");
+                    String cityName = getFormattedCityName(address.getString("city"));
                     String areaID = "";
                     if (!cityName.isEmpty() && address.getInt("country_code") == 0) {
-                        if (cityName.length() > 2 && cityName.endsWith("市")) {
-                            cityName = cityName.replace("市", "");
-                        } else if (cityName.length() > 2 && cityName.endsWith("县")) {
-                            cityName = cityName.replace("县", "");
-                        }
                         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
                         SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
                         Cursor cursor = sqLiteDatabase.query("weathers", DatabaseContracts.PROJECTION,
@@ -409,7 +404,7 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
         }
 
         private ArrayList<WeatherLocation> getLocations(String input) {
-            String searchText = input.toLowerCase();
+            String searchText = getFormattedCityName(input.toLowerCase());
             ArrayList<WeatherLocation> results = new ArrayList<>();
 
             DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
@@ -491,5 +486,15 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
             stringBuilder.append(getString(R.string.aqi_level_6));
         }
         return stringBuilder.toString();
+    }
+
+    private String getFormattedCityName(String cityName) {
+        if (cityName.length() > 2 && cityName.endsWith("市")) {
+            return cityName.replace("市", "");
+        } else if (cityName.length() > 2 && cityName.endsWith("县")) {
+            return cityName.replace("县", "");
+        } else {
+            return cityName;
+        }
     }
 }
