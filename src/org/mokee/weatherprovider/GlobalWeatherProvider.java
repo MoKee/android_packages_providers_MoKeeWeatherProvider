@@ -110,8 +110,7 @@ public class GlobalWeatherProvider {
             //NOTE: The timestamp provided by OpenWeatherMap corresponds to the time the data
             //was last updated by the stations. Let's use System.currentTimeMillis instead
             weatherInfo.setTimestamp(System.currentTimeMillis());
-            weatherInfo.setWeatherCondition(mapConditionIconToCode(weather.getString("icon"),
-                    weather.getInt("id")));
+            weatherInfo.setWeatherCondition(mapConditionIconToCode(weather.getInt("id")));
             weatherInfo.setForecast(forecasts);
 
             if (mRequest.getRequestInfo().getRequestType()
@@ -155,8 +154,7 @@ public class GlobalWeatherProvider {
             JSONObject forecast = forecasts.getJSONObject(i);
             JSONObject temperature = forecast.getJSONObject("temp");
             JSONObject weather = forecast.getJSONArray("weather").getJSONObject(0);
-            DayForecast item = new WeatherInfo.DayForecast.Builder(mapConditionIconToCode(
-                    weather.getString("icon"), weather.getInt("id")))
+            DayForecast item = new WeatherInfo.DayForecast.Builder(mapConditionIconToCode(weather.getInt("id")))
                     .setLow(sanitizeTemperature(temperature.getDouble("min"), metric))
                     .setHigh(sanitizeTemperature(temperature.getDouble("max"), metric)).build();
             result.add(item);
@@ -164,103 +162,171 @@ public class GlobalWeatherProvider {
         return result;
     }
 
-    private static int mapConditionIconToCode(String icon, int conditionId) {
-
-        // First, use condition ID for specific cases
+    private static int mapConditionIconToCode(int conditionId) {
         switch (conditionId) {
             // Thunderstorms
-            case 202:   // thunderstorm with heavy rain
-            case 232:   // thunderstorm with heavy drizzle
-            case 211:   // thunderstorm
-                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSTORMS;
-            case 212:   // heavy thunderstorm
-                return WeatherContract.WeatherColumns.WeatherCode.HURRICANE;
-            case 221:   // ragged thunderstorm
-            case 231:   // thunderstorm with drizzle
-            case 201:   // thunderstorm with rain
-                return WeatherContract.WeatherColumns.WeatherCode.SCATTERED_THUNDERSTORMS;
-            case 230:   // thunderstorm with light drizzle
-            case 200:   // thunderstorm with light rain
-            case 210:   // light thunderstorm
-                return WeatherContract.WeatherColumns.WeatherCode.ISOLATED_THUNDERSTORMS;
+            case 200: // thunderstorm with light rain
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 201: // thunderstorm with rain
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 202: // thunderstorm with heavy rain
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 210: // light thunderstorm
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 211: // thunderstorm
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 212: // heavy thunderstorm
+                return WeatherContract.WeatherColumns.WeatherCode.HEAVY_THUNDERSTORM;
+            case 221: // ragged thunderstorm
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 230: // thunderstorm with light drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 231: // thunderstorm with drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+            case 232: // thunderstorm with heavy drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
 
             // Drizzle
-            case 300:   // light intensity drizzle
-            case 301:   // drizzle
-            case 302:   // heavy intensity drizzle
-            case 310:   // light intensity drizzle rain
-            case 311:   // drizzle rain
-            case 312:   // heavy intensity drizzle rain
-            case 313:   // shower rain and drizzle
-            case 314:   // heavy shower rain and drizzle
-            case 321:   // shower drizzle
-                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE;
+            case 300: // light intensity drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 301: // drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 302: // heavy intensity drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 310: // light intensity drizzle rain
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 311: // drizzle rain
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 312: // heavy intensity drizzle rain
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 313: // shower rain and drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 314: // heavy shower rain and drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+            case 321: // shower drizzle
+                return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
 
             // Rain
-            case 500:   // light rain
-            case 501:   // moderate rain
-            case 520:   // light intensity shower rain
-            case 521:   // shower rain
-            case 531:   // ragged shower rain
-            case 502:   // heavy intensity rain
-            case 503:   // very heavy rain
-            case 504:   // extreme rain
-            case 522:   // heavy intensity shower rain
-                return WeatherContract.WeatherColumns.WeatherCode.SHOWERS;
-            case 511:   // freezing rain
+            case 500: // light rain
+                return WeatherContract.WeatherColumns.WeatherCode.LIGHT_RAIN;
+            case 501: // moderate rain
+                return WeatherContract.WeatherColumns.WeatherCode.MODERATE_RAIN;
+            case 502: // heavy intensity rain
+                return WeatherContract.WeatherColumns.WeatherCode.HEAVY_RAIN;
+            case 503: // very heavy rain
+                return WeatherContract.WeatherColumns.WeatherCode.HEAVY_RAIN;
+            case 504: // extreme rain
+                return WeatherContract.WeatherColumns.WeatherCode.EXTREME_RAIN;
+            case 511: // freezing rain
                 return WeatherContract.WeatherColumns.WeatherCode.FREEZING_RAIN;
+            case 520: // light intensity shower rain
+                return WeatherContract.WeatherColumns.WeatherCode.SHOWER_RAIN;
+            case 521: // shower rain
+                return WeatherContract.WeatherColumns.WeatherCode.SHOWER_RAIN;
+            case 522: // heavy intensity shower rain
+                return WeatherContract.WeatherColumns.WeatherCode.HEAVY_SHOWER_RAIN;
+            case 531: // ragged shower rain
+                return WeatherContract.WeatherColumns.WeatherCode.SHOWER_RAIN;
 
             // Snow
-            case 600: case 620: // light snow
-                return WeatherContract.WeatherColumns.WeatherCode.LIGHT_SNOW_SHOWERS;
-            case 601: case 621: // snow
-                return WeatherContract.WeatherColumns.WeatherCode.SNOW;
-            case 602: case 622: // heavy snow
+            case 600: // light snow
+                return WeatherContract.WeatherColumns.WeatherCode.LIGHT_SNOW;
+            case 601: // snow
+                return WeatherContract.WeatherColumns.WeatherCode.MODERATE_SNOW;
+            case 602: // heavy snow
                 return WeatherContract.WeatherColumns.WeatherCode.HEAVY_SNOW;
-            case 611: case 612: // sleet
+            case 611: // sleet
                 return WeatherContract.WeatherColumns.WeatherCode.SLEET;
-            case 615: case 616: // rain and snow
-                return WeatherContract.WeatherColumns.WeatherCode.MIXED_RAIN_AND_SNOW;
+            case 612: // shower sleet
+                return WeatherContract.WeatherColumns.WeatherCode.RAIN_WITH_SNOW;
+            case 615: // light rain and snow
+                return WeatherContract.WeatherColumns.WeatherCode.RAIN_WITH_SNOW;
+            case 616: // rain and snow
+                return WeatherContract.WeatherColumns.WeatherCode.RAIN_WITH_SNOW;
+            case 620: // light shower snow
+                return WeatherContract.WeatherColumns.WeatherCode.SHOWER_SNOW;
+            case 621: // shower snow
+                return WeatherContract.WeatherColumns.WeatherCode.SHOWER_SNOW;
+            case 622: // heavy shower snow
+                return WeatherContract.WeatherColumns.WeatherCode.SHOWER_SNOW;
 
             // Atmosphere
-            case 741:   // fog
+            case 701: // mist
+                return WeatherContract.WeatherColumns.WeatherCode.MIST;
+            case 711: // smoke
                 return WeatherContract.WeatherColumns.WeatherCode.FOGGY;
-            case 711:   // smoke
-            case 762:   // volcanic ash
-                return WeatherContract.WeatherColumns.WeatherCode.SMOKY;
-            case 701:   // mist
-            case 721:   // haze
+            case 721: // haze
                 return WeatherContract.WeatherColumns.WeatherCode.HAZE;
-            case 731:   // sand/dust whirls
-            case 751:   // sand
-            case 761:   // dust
+            case 731: // sand, dust whirls
+                return WeatherContract.WeatherColumns.WeatherCode.SAND;
+            case 741: // fog
+                return WeatherContract.WeatherColumns.WeatherCode.FOGGY;
+            case 751: // sand
+                return WeatherContract.WeatherColumns.WeatherCode.SAND;
+            case 761: // dust
                 return WeatherContract.WeatherColumns.WeatherCode.DUST;
-            case 771:   // squalls
-                return WeatherContract.WeatherColumns.WeatherCode.BLUSTERY;
-            case 781:   // tornado
+            case 762: // volcanic ash
+                return WeatherContract.WeatherColumns.WeatherCode.VOLCANIC_ASH;
+            case 771: // squalls
+                return WeatherContract.WeatherColumns.WeatherCode.HIGH_WIND;
+            case 781: // tornado
                 return WeatherContract.WeatherColumns.WeatherCode.TORNADO;
+
+            // Clear
+            case 800: // clear sky
+                return WeatherContract.WeatherColumns.WeatherCode.SUNNY;
+
+            // Clouds
+            case 801: // few clouds
+                return WeatherContract.WeatherColumns.WeatherCode.FEW_CLOUDS;
+            case 802: // scattered clouds
+                return WeatherContract.WeatherColumns.WeatherCode.FEW_CLOUDS;
+            case 803: // broken clouds
+                return WeatherContract.WeatherColumns.WeatherCode.FEW_CLOUDS;
+            case 804: // overcast clouds
+                return WeatherContract.WeatherColumns.WeatherCode.OVERCAST;
 
             // Extreme
-            case 900:   // tornado
+            case 900: // tornado
                 return WeatherContract.WeatherColumns.WeatherCode.TORNADO;
-            case 901:   // tropical storm
+            case 901: // tropical storm
                 return WeatherContract.WeatherColumns.WeatherCode.TROPICAL_STORM;
-            case 902:   // hurricane
+            case 902: // hurricane
                 return WeatherContract.WeatherColumns.WeatherCode.HURRICANE;
-            case 903:   // cold
+            case 903: // cold
                 return WeatherContract.WeatherColumns.WeatherCode.COLD;
-            case 904:   // hot
+            case 904: // hot
                 return WeatherContract.WeatherColumns.WeatherCode.HOT;
-            case 905:   // windy
+            case 905: // windy
                 return WeatherContract.WeatherColumns.WeatherCode.WINDY;
-            case 906:   // hail
+            case 906: // hail
                 return WeatherContract.WeatherColumns.WeatherCode.HAIL;
-        }
 
-        // Not yet handled - Use generic icon mapping
-        Integer condition = ICON_MAPPING.get(icon);
-        if (condition != null) {
-            return condition;
+            // Additional
+            case 951: // calm
+                return WeatherContract.WeatherColumns.WeatherCode.CALM;
+            case 952: // light breeze
+                return WeatherContract.WeatherColumns.WeatherCode.LIGHT_BREEZE;
+            case 953: // gentle breeze
+                return WeatherContract.WeatherColumns.WeatherCode.MODERATE_BREEZE;
+            case 954: // moderate breeze
+                return WeatherContract.WeatherColumns.WeatherCode.MODERATE_BREEZE;
+            case 955: // fresh breeze
+                return WeatherContract.WeatherColumns.WeatherCode.FRESH_BREEZE;
+            case 956: // strong breeze
+                return WeatherContract.WeatherColumns.WeatherCode.STRONG_BREEZE;
+            case 957: // high wind, near gale
+                return WeatherContract.WeatherColumns.WeatherCode.HIGH_WIND;
+            case 958: // gale
+                return WeatherContract.WeatherColumns.WeatherCode.GALE;
+            case 959: // severe gale
+                return WeatherContract.WeatherColumns.WeatherCode.STRONG_GALE;
+            case 960: // storm
+                return WeatherContract.WeatherColumns.WeatherCode.STORM;
+            case 961: // violent storm
+                return WeatherContract.WeatherColumns.WeatherCode.VIOLENT_STORM;
+            case 962: // hurricane
+                return WeatherContract.WeatherColumns.WeatherCode.HURRICANE;
         }
 
         return WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE;
@@ -292,28 +358,6 @@ public class GlobalWeatherProvider {
             if (DEBUG) Log.w(TAG, "JSONException while processing location lookup", e);
         }
         return null;
-    }
-
-    private static final HashMap<String, Integer> ICON_MAPPING = new HashMap<>();
-    static {
-        ICON_MAPPING.put("01d", WeatherContract.WeatherColumns.WeatherCode.SUNNY);
-        ICON_MAPPING.put("01n", WeatherContract.WeatherColumns.WeatherCode.CLEAR_NIGHT);
-        ICON_MAPPING.put("02d", WeatherContract.WeatherColumns.WeatherCode.PARTLY_CLOUDY_DAY);
-        ICON_MAPPING.put("02n", WeatherContract.WeatherColumns.WeatherCode.PARTLY_CLOUDY_NIGHT);
-        ICON_MAPPING.put("03d", WeatherContract.WeatherColumns.WeatherCode.CLOUDY);
-        ICON_MAPPING.put("03n", WeatherContract.WeatherColumns.WeatherCode.CLOUDY);
-        ICON_MAPPING.put("04d", WeatherContract.WeatherColumns.WeatherCode.MOSTLY_CLOUDY_DAY);
-        ICON_MAPPING.put("04n", WeatherContract.WeatherColumns.WeatherCode.MOSTLY_CLOUDY_NIGHT);
-        ICON_MAPPING.put("09d", WeatherContract.WeatherColumns.WeatherCode.SHOWERS);
-        ICON_MAPPING.put("09n", WeatherContract.WeatherColumns.WeatherCode.SHOWERS);
-        ICON_MAPPING.put("10d", WeatherContract.WeatherColumns.WeatherCode.SCATTERED_SHOWERS);
-        ICON_MAPPING.put("10n", WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER);
-        ICON_MAPPING.put("11d", WeatherContract.WeatherColumns.WeatherCode.THUNDERSTORMS);
-        ICON_MAPPING.put("11n", WeatherContract.WeatherColumns.WeatherCode.THUNDERSTORMS);
-        ICON_MAPPING.put("13d", WeatherContract.WeatherColumns.WeatherCode.SNOW);
-        ICON_MAPPING.put("13n", WeatherContract.WeatherColumns.WeatherCode.SNOW);
-        ICON_MAPPING.put("50d", WeatherContract.WeatherColumns.WeatherCode.HAZE);
-        ICON_MAPPING.put("50n", WeatherContract.WeatherColumns.WeatherCode.FOGGY);
     }
 
     private static final HashMap<String, String> LANGUAGE_CODE_MAPPING = new HashMap<>();

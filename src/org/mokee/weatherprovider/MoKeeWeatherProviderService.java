@@ -268,27 +268,37 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
         private int mapConditionIconToCode(int conditionId) {
             switch (conditionId) {
                 case 100: //晴
-                case 201: //平静
                     return WeatherContract.WeatherColumns.WeatherCode.SUNNY;
                 case 101: //多云
-                    return WeatherContract.WeatherColumns.WeatherCode.MOSTLY_CLOUDY_NIGHT;
+                    return WeatherContract.WeatherColumns.WeatherCode.CLOUDY;
                 case 102: //少云
+                    return WeatherContract.WeatherColumns.WeatherCode.FEW_CLOUDS;
                 case 103: //晴间多云
                     return WeatherContract.WeatherColumns.WeatherCode.PARTLY_CLOUDY;
                 case 104: //阴
-                    return WeatherContract.WeatherColumns.WeatherCode.CLOUDY;
+                    return WeatherContract.WeatherColumns.WeatherCode.OVERCAST;
                 case 200: //有风
                     return WeatherContract.WeatherColumns.WeatherCode.WINDY;
+                case 201: //平静
+                    return WeatherContract.WeatherColumns.WeatherCode.CALM;
                 case 202: //微风
+                    return WeatherContract.WeatherColumns.WeatherCode.LIGHT_BREEZE;
                 case 203: //和风
+                    return WeatherContract.WeatherColumns.WeatherCode.MODERATE_BREEZE;
                 case 204: //清风
+                    return WeatherContract.WeatherColumns.WeatherCode.FRESH_BREEZE;
                 case 205: //强风/劲风
+                    return WeatherContract.WeatherColumns.WeatherCode.STRONG_BREEZE;
                 case 206: //疾风
+                    return WeatherContract.WeatherColumns.WeatherCode.HIGH_WIND;
                 case 207: //大风
+                    return WeatherContract.WeatherColumns.WeatherCode.GALE;
                 case 208: //烈风
-                    return WeatherContract.WeatherColumns.WeatherCode.WINDY;
+                    return WeatherContract.WeatherColumns.WeatherCode.STRONG_GALE;
                 case 209: //风暴
+                    return WeatherContract.WeatherColumns.WeatherCode.STORM;
                 case 210: //狂爆风
+                    return WeatherContract.WeatherColumns.WeatherCode.VIOLENT_STORM;
                 case 211: //飓风
                     return WeatherContract.WeatherColumns.WeatherCode.HURRICANE;
                 case 212: //龙卷风
@@ -296,48 +306,65 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
                 case 213: //热带风暴
                     return WeatherContract.WeatherColumns.WeatherCode.TROPICAL_STORM;
                 case 300: //阵雨
+                    return WeatherContract.WeatherColumns.WeatherCode.SHOWER_RAIN;
                 case 301: //强阵雨
-                case 305: //小雨
-                case 306: //中雨
-                case 307: //大雨
-                case 308: //极端降雨
-                case 309: //毛毛雨/细雨
-                case 310: //暴雨
-                case 311: //大暴雨
-                case 312: //特大暴雨
-                    return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE;
+                    return WeatherContract.WeatherColumns.WeatherCode.HEAVY_SHOWER_RAIN;
                 case 302: //雷阵雨
-                case 303: //强雷阵雨
                     return WeatherContract.WeatherColumns.WeatherCode.THUNDERSHOWER;
+                case 303: //强雷阵雨
+                    return WeatherContract.WeatherColumns.WeatherCode.HEAVY_THUNDERSTORM;
                 case 304: //雷阵雨伴有冰雹
                     return WeatherContract.WeatherColumns.WeatherCode.HAIL;
+                case 305: //小雨
+                    return WeatherContract.WeatherColumns.WeatherCode.LIGHT_RAIN;
+                case 306: //中雨
+                    return WeatherContract.WeatherColumns.WeatherCode.MODERATE_RAIN;
+                case 307: //大雨
+                    return WeatherContract.WeatherColumns.WeatherCode.HEAVY_RAIN;
+                case 308: //极端降雨
+                    return WeatherContract.WeatherColumns.WeatherCode.EXTREME_RAIN;
+                case 309: //毛毛雨/细雨
+                    return WeatherContract.WeatherColumns.WeatherCode.DRIZZLE_RAIN;
+                case 310: //暴雨
+                    return WeatherContract.WeatherColumns.WeatherCode.RAIN_STORM;
+                case 311: //大暴雨
+                    return WeatherContract.WeatherColumns.WeatherCode.HEAVY_RAIN_STORM;
+                case 312: //特大暴雨
+                    return WeatherContract.WeatherColumns.WeatherCode.SEVERE_RAIN_STORM;
                 case 313: //冻雨
-                    return WeatherContract.WeatherColumns.WeatherCode.FREEZING_DRIZZLE;
+                    return WeatherContract.WeatherColumns.WeatherCode.FREEZING_RAIN;
                 case 400: //小雪
+                    return WeatherContract.WeatherColumns.WeatherCode.LIGHT_SNOW;
                 case 401: //中雪
-                    return WeatherContract.WeatherColumns.WeatherCode.SNOW;
+                    return WeatherContract.WeatherColumns.WeatherCode.MODERATE_SNOW;
                 case 402: //大雪
-                case 403: //暴雪
                     return WeatherContract.WeatherColumns.WeatherCode.HEAVY_SNOW;
+                case 403: //暴雪
+                    return WeatherContract.WeatherColumns.WeatherCode.SNOWSTORM;
                 case 404: //雨夹雪
                     return WeatherContract.WeatherColumns.WeatherCode.SLEET;
                 case 405: //雨雪天气
-                    return WeatherContract.WeatherColumns.WeatherCode.MIXED_RAIN_AND_SNOW;
+                    return WeatherContract.WeatherColumns.WeatherCode.RAIN_WITH_SNOW;
                 case 406: //阵雨夹雪
-                    return WeatherContract.WeatherColumns.WeatherCode.SNOW_SHOWERS;
+                    return WeatherContract.WeatherColumns.WeatherCode.SHOWER_SNOW;
                 case 407: //阵雪
-                    return WeatherContract.WeatherColumns.WeatherCode.SNOW_FLURRIES;
+                    return WeatherContract.WeatherColumns.WeatherCode.SNOW_FLURRY;
                 case 500: //薄雾
+                    return WeatherContract.WeatherColumns.WeatherCode.MIST;
                 case 501: //雾
                     return WeatherContract.WeatherColumns.WeatherCode.FOGGY;
                 case 502: //霾
                     return WeatherContract.WeatherColumns.WeatherCode.HAZE;
                 case 503: //扬沙
+                    return WeatherContract.WeatherColumns.WeatherCode.SAND;
                 case 504: //浮尘
-                case 506: //火山灰
-                case 507: //沙尘暴
-                case 508: //强沙尘暴
                     return WeatherContract.WeatherColumns.WeatherCode.DUST;
+                case 506: //火山灰
+                    return WeatherContract.WeatherColumns.WeatherCode.VOLCANIC_ASH;
+                case 507: //沙尘暴
+                    return WeatherContract.WeatherColumns.WeatherCode.DUSTSTORM;
+                case 508: //强沙尘暴
+                    return WeatherContract.WeatherColumns.WeatherCode.SANDSTORM;
                 case 900: //热
                     return WeatherContract.WeatherColumns.WeatherCode.HOT;
                 case 901: //冷
