@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">Info su...</string>
   <string name="aqi_level_2">Moderata</string>
+  <string name="uv_level_2">Moderata</string>
   <string name="uv_level_5">Estrema</string>
   <!-- Copyright and disclaimers -->
 </resources>

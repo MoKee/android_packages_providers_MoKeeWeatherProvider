@@ -17,7 +17,18 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">Об этом</string>
+  <string name="aqi">Воздух</string>
+  <string name="aqi_level_1">Хороший</string>
   <string name="aqi_level_2">Опытный</string>
+  <string name="aqi_level_3">Вредный для чувствительных групп</string>
+  <string name="aqi_level_4">Нездоровый</string>
+  <string name="aqi_level_5">Очень нездоровой</string>
+  <string name="aqi_level_6">Опасный</string>
+  <string name="uv">УФ-индекс</string>
+  <string name="uv_level_1">Низкий</string>
+  <string name="uv_level_2">Опытный</string>
+  <string name="uv_level_3">Высокий</string>
+  <string name="uv_level_4">Очень высокий</string>
   <string name="uv_level_5">Максимум</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Условия предоставления</string>

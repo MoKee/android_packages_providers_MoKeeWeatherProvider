@@ -16,5 +16,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Über</string>
+  <string name="aqi_level_1">Gut</string>
+  <string name="aqi_level_2">Mittelmäßig</string>
+  <string name="aqi_level_3">Ungesund für empfindliche Personen</string>
+  <string name="aqi_level_4">Ungesund</string>
+  <string name="aqi_level_5">Sehr ungesund</string>
+  <string name="aqi_level_6">Gefährlich</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">niedrig</string>
+  <string name="uv_level_3">hoch</string>
+  <string name="uv_level_4">sehr hoch</string>
+  <string name="uv_level_5">extrem</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Impressum</string>
+  <string name="prefscreen_copyright_summary">Die Angaben, die von dieser Anwendung gemacht werden werden für allgemeine Informationszwecke zur Verfügung gestellt und erheben keinen Anspruch auf rechtliche oder sonstige Beratung. Weder %1$s noch der Anbieter dieser Anwendung können als solche verstanden werden.</string>
 </resources>
