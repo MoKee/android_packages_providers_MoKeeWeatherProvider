@@ -19,17 +19,17 @@
   <string name="prefscreen_category_about_title">關於</string>
   <string name="aqi">空氣質素</string>
   <string name="aqi_level_1">良好</string>
-  <string name="aqi_level_2">複雜界面</string>
+  <string name="aqi_level_2">中等</string>
   <string name="aqi_level_3">輕度汚染</string>
-  <string name="aqi_level_4">不健康</string>
-  <string name="aqi_level_5">非常不健康</string>
-  <string name="aqi_level_6">汚染嚴重</string>
+  <string name="aqi_level_4">中度汚染</string>
+  <string name="aqi_level_5">重度汚染</string>
+  <string name="aqi_level_6">嚴重汚染</string>
   <string name="uv">紫外線</string>
   <string name="uv_level_1">低</string>
-  <string name="uv_level_2">複雜界面</string>
+  <string name="uv_level_2">中</string>
   <string name="uv_level_3">高</string>
-  <string name="uv_level_4">非常高</string>
-  <string name="uv_level_5">極端</string>
+  <string name="uv_level_4">很高</string>
+  <string name="uv_level_5">極高</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">免責聲明</string>
 </resources>

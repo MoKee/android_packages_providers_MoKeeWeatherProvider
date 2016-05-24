@@ -26,8 +26,12 @@
   <string name="aqi_level_5">重度污染</string>
   <string name="aqi_level_6">严重污染</string>
   <string name="uv">紫外线</string>
+  <string name="uv_level_1">低</string>
   <string name="uv_level_2">复杂界面</string>
+  <string name="uv_level_3">高</string>
+  <string name="uv_level_4">非常高</string>
   <string name="uv_level_5">极端</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">免责声明</string>
+  <string name="prefscreen_copyright_summary">此应用程序所提供的资料只供一般参考提供不自称是或构成法律或其它专业建议和不能依靠 %1$s 也因此此应用程序的提供程序。</string>
 </resources>
