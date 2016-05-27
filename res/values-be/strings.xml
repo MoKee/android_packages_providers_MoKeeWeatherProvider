@@ -17,8 +17,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">Аб праграме</string>
+  <string name="aqi">Паветра</string>
   <string name="aqi_level_1">Добра</string>
   <string name="uv_level_1">Нізкі</string>
   <string name="uv_level_3">Высокі</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Умовы прадастаўлення</string>
 </resources>
