@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">À Propos</string>
   <string name="aqi_level_2">Modéré</string>
+  <string name="uv">UV</string>
   <string name="uv_level_2">Modéré</string>
   <string name="uv_level_5">Extrême</string>
   <!-- Copyright and disclaimers -->

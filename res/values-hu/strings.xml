@@ -16,8 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Információk</string>
+  <string name="aqi">LEVEGŐ</string>
+  <string name="aqi_level_1">Jó</string>
   <string name="aqi_level_2">Közepes</string>
+  <string name="aqi_level_3">Egészségtelen az érzékeny csoportok számára</string>
+  <string name="aqi_level_4">Egészségtelen</string>
+  <string name="aqi_level_5">Nagyon egészségtelen</string>
+  <string name="aqi_level_6">Kockázatos</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Alacsony</string>
   <string name="uv_level_2">Közepes</string>
+  <string name="uv_level_3">Magas</string>
+  <string name="uv_level_4">Nagyon magas</string>
   <string name="uv_level_5">Extrém</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Nyilatkozat</string>
+  <string name="prefscreen_copyright_summary">Ez csak egy, az alkalmazás által előírt, általános tájékoztató célú információ és nem követeli, hogy legyen vagy alkosson legális vagy más szakmai tanácsot és nem lehet hivatkozni %1$s se az alkalmazás szolgáltatójára mint olyan.</string>
 </resources>
