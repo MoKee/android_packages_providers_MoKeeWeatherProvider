@@ -16,8 +16,20 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">關於</string>
+  <string name="aqi">AIR</string>
+  <string name="aqi_level_1">良好</string>
   <string name="aqi_level_2">複雜界面</string>
-  <string name="uv_level_2">複雜界面</string>
+  <string name="aqi_level_3">不利於敏感群體</string>
+  <string name="aqi_level_4">不健康</string>
+  <string name="aqi_level_5">非常不健康</string>
+  <string name="aqi_level_6">有危險</string>
+  <string name="uv">紫外線</string>
+  <string name="uv_level_1">低</string>
+  <string name="uv_level_2">中等</string>
+  <string name="uv_level_3">高</string>
+  <string name="uv_level_4">非常高</string>
   <string name="uv_level_5">極端</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">免責聲明</string>
 </resources>

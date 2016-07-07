@@ -32,4 +32,5 @@
   <string name="uv_level_5">極高</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">免責聲明</string>
+  <string name="prefscreen_copyright_summary">此應用程式所提供的資訊僅作一般參考提供，並不聲稱或構成法律或其他專業建議，亦不依賴於 %1$s 或此應用程式的提供者</string>
 </resources>
