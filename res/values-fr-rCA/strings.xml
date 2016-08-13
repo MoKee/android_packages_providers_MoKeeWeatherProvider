@@ -17,9 +17,18 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">À Propos</string>
+  <string name="aqi">AIR</string>
+  <string name="aqi_level_1">Bien</string>
   <string name="aqi_level_2">Modéré</string>
+  <string name="aqi_level_3">Mauvais pour les groupes sensibles</string>
+  <string name="aqi_level_4">Mauvais</string>
+  <string name="aqi_level_5">Très mauvais</string>
+  <string name="aqi_level_6">Dangereux</string>
   <string name="uv">UV</string>
+  <string name="uv_level_1">Bas</string>
   <string name="uv_level_2">Modéré</string>
+  <string name="uv_level_3">Élevé</string>
+  <string name="uv_level_4">Très élevée</string>
   <string name="uv_level_5">Extrême</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Avertissement</string>

@@ -16,8 +16,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">O</string>
+  <string name="aqi">Powietrze</string>
+  <string name="aqi_level_1">Dobrze</string>
   <string name="aqi_level_2">Standardowy</string>
+  <string name="aqi_level_3">Niezdrowe dla wrażliwych osób</string>
+  <string name="aqi_level_4">Niezdrowe</string>
+  <string name="aqi_level_5">Bardzo niezdrowe</string>
+  <string name="aqi_level_6">Niebezpieczne</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Nisko</string>
   <string name="uv_level_2">Standardowy</string>
   <string name="uv_level_5">Mocna</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Zrzeczenie się</string>
+  <string name="prefscreen_copyright_summary">Informacje dostarczone przez tę aplikację są świadczone tylko w celach informacyjnych i nie stanowią profesjonalnej porady prawnej lub innej, nie można powoływać się na %1$s, ani dostawce tej aplikacji jako tak.</string>
 </resources>
