@@ -16,5 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Thông tin</string>
+  <string name="aqi">MÁY</string>
+  <string name="aqi_level_1">Tốt</string>
+  <string name="aqi_level_2">Vừa phải</string>
+  <string name="aqi_level_3">Không lành mạnh cho các nhóm nhạy cảm</string>
+  <string name="aqi_level_4">Không lành mạnh</string>
+  <string name="aqi_level_5">Rất không lành mạnh</string>
+  <string name="aqi_level_6">Nguy hiểm</string>
+  <string name="uv">TIA CỰC TÍM</string>
+  <string name="uv_level_1">Thấp</string>
+  <string name="uv_level_2">Vừa phải</string>
+  <string name="uv_level_3">Cao</string>
+  <string name="uv_level_4">Rất cao</string>
+  <string name="uv_level_5">Cao</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Tuyên bố từ chối</string>
+  <string name="prefscreen_copyright_summary">Thông tin được cung cấp bởi ứng dụng này được cung cấp cho các mục đích thông tin chung, không yêu cầu bồi thường để hoặc cấu thành tư vấn chuyên nghiệp về pháp lý hay khác và sẽ không được dựa vào %1$s cũng như các nhà cung cấp của ứng dụng này là như vậy.</string>
 </resources>

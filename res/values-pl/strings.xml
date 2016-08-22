@@ -27,6 +27,8 @@
   <string name="uv">UV</string>
   <string name="uv_level_1">Nisko</string>
   <string name="uv_level_2">Standardowy</string>
+  <string name="uv_level_3">Wysoka</string>
+  <string name="uv_level_4">Bardzo wysoka</string>
   <string name="uv_level_5">Mocna</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Zrzeczenie się</string>
