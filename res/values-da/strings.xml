@@ -17,7 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">Om</string>
+  <string name="aqi_level_3">Usund for følsomme grupper</string>
   <string name="aqi_level_4">Usundt</string>
+  <string name="aqi_level_5">Meget usund</string>
   <string name="uv_level_1">Lav</string>
   <string name="uv_level_3">Høj</string>
   <string name="uv_level_4">Meget høj</string>
