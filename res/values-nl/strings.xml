@@ -16,5 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aqi_level_2">Gemiddeld</string>
+  <string name="uv_level_2">Gemiddeld</string>
+  <string name="uv_level_5">Extreem</string>
   <!-- Copyright and disclaimers -->
 </resources>
