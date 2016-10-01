@@ -20,6 +20,16 @@
   <string name="aqi">ВЪЗДУХ</string>
   <string name="aqi_level_1">Добър</string>
   <string name="aqi_level_2">Умерено</string>
+  <string name="aqi_level_3">Нездравословно за чувствителни групи</string>
+  <string name="aqi_level_4">Нездравословно</string>
+  <string name="aqi_level_5">Много нездравословно</string>
+  <string name="aqi_level_6">Опасни</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Ниско</string>
+  <string name="uv_level_2">Средно напреднал</string>
+  <string name="uv_level_3">Високо</string>
+  <string name="uv_level_4">Много високо</string>
+  <string name="uv_level_5">Екстремно</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Общи условия</string>
   <string name="prefscreen_copyright_summary">Информацията, предоставена от това приложение, е само за обща информация и не претендира да бъде или представлява правни или други професионални съвети и не се разчита %1$s нито доставчика на това приложение като такива.</string>
