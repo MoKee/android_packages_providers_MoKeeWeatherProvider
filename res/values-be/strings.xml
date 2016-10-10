@@ -19,8 +19,18 @@
   <string name="prefscreen_category_about_title">Аб праграме</string>
   <string name="aqi">Паветра</string>
   <string name="aqi_level_1">Добра</string>
+  <string name="aqi_level_2">Сярэдні</string>
+  <string name="aqi_level_3">Шкодны для адчувальных людзей</string>
+  <string name="aqi_level_4">Шкодны</string>
+  <string name="aqi_level_5">Вельмі шкодны</string>
+  <string name="aqi_level_6">Небяспечны</string>
+  <string name="uv">Ультрафіялетавы індэкс</string>
   <string name="uv_level_1">Нізкі</string>
+  <string name="uv_level_2">Сярэдні</string>
   <string name="uv_level_3">Высокі</string>
+  <string name="uv_level_4">Вельмі высокі</string>
+  <string name="uv_level_5">Экстрэмальны</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Умовы прадастаўлення</string>
+  <string name="prefscreen_copyright_summary">Інфармацыя, прадстаўленая гэтым дадаткам, даецца выключна ў інфармацыйных мэтах і не прэтэндуе быць юрыдычнай ці іншай прафесійнай кансультацыяй. Вы не павінны спадзявацца ні на %1$s, ні пастаўшчыка гэтага прыкладання.</string>
 </resources>
