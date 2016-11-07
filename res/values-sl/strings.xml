@@ -17,6 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">O nas</string>
+  <string name="aqi_level_4">Nezdravo</string>
+  <string name="aqi_level_5">Zelo nezdravo</string>
+  <string name="uv">UV</string>
   <string name="uv_level_5">Ekstremno</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Izjava o omejitvi odgovornosti</string>

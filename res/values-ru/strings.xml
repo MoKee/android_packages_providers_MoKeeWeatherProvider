@@ -16,13 +16,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="prefscreen_category_about_title">Об этом</string>
+  <string name="prefscreen_category_about_title">О программе</string>
   <string name="aqi">Воздух</string>
   <string name="aqi_level_1">Хороший</string>
   <string name="aqi_level_2">Умеренный</string>
-  <string name="aqi_level_3">Вредный для чувствительных групп</string>
-  <string name="aqi_level_4">Нездоровый</string>
-  <string name="aqi_level_5">Очень нездоровой</string>
+  <string name="aqi_level_3">Вредный для чувствительных людей</string>
+  <string name="aqi_level_4">Небезопасный</string>
+  <string name="aqi_level_5">Очень небезопасный</string>
   <string name="aqi_level_6">Опасный</string>
   <string name="uv">УФ-индекс</string>
   <string name="uv_level_1">Низкий</string>
