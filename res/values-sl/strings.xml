@@ -16,5 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">O nas</string>
+  <string name="aqi">ZRAK</string>
+  <string name="aqi_level_1">Dobro</string>
+  <string name="aqi_level_2">Zmerno</string>
+  <string name="aqi_level_3">Škodljivo zdravju občutljivih skupin</string>
+  <string name="aqi_level_4">Nezdravo</string>
+  <string name="aqi_level_5">Zelo nezdravo</string>
+  <string name="aqi_level_6">Nevarno</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Nizko</string>
+  <string name="uv_level_2">Zmerno</string>
+  <string name="uv_level_3">Visoko</string>
+  <string name="uv_level_4">Zelo visoko</string>
+  <string name="uv_level_5">Ekstremno</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Izjava o omejitvi odgovornosti</string>
+  <string name="prefscreen_copyright_summary">Informacije pridobljene s to aplikacijo, so samo v splošne informativne namene. Tukaj ne gre za pravni ali strokovni nasvet in se na ponudnika %1$s ne smemo sklicevati.</string>
 </resources>

@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">關於</string>
-  <string name="aqi">AIR</string>
+  <string name="aqi">空氣</string>
   <string name="aqi_level_1">良好</string>
   <string name="aqi_level_2">複雜界面</string>
   <string name="aqi_level_3">不利於敏感群體</string>
@@ -32,4 +32,5 @@
   <string name="uv_level_5">極端</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">免責聲明</string>
+  <string name="prefscreen_copyright_summary">此應用程式所提供的資訊僅作一般參考提供，並不聲稱或構成法律或其他專業建議，亦不依賴於 %1$s 或此應用程式的提供者。</string>
 </resources>
