@@ -16,5 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Σχετικά</string>
+  <string name="aqi">ΑΕΡΑΣ</string>
+  <string name="aqi_level_1">Καλός</string>
+  <string name="aqi_level_2">Μέτριος</string>
+  <string name="aqi_level_3">Ανθυγιεινός για ευπαθείς ομάδες</string>
+  <string name="aqi_level_4">Ανθυγιεινός</string>
+  <string name="aqi_level_5">Πολύ ανθυγιεινός</string>
+  <string name="aqi_level_6">Επικίνδυνος</string>
+  <string name="uv">ΑΚΤΙΝΟΒΟΛΙΑ</string>
+  <string name="uv_level_1">Χαμηλή</string>
+  <string name="uv_level_2">Μέτρια</string>
+  <string name="uv_level_3">Υψηλή</string>
+  <string name="uv_level_4">Πολύ υψηλή</string>
+  <string name="uv_level_5">Ακραία</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Αποποίηση ευθυνών</string>
+  <string name="prefscreen_copyright_summary">Οι πληροφορίες που παρέχονται από αυτήν την εφαρμογή παρέχονται για λόγους γενικής ενημέρωσης μόνο και δεν ισχυρίζονται ότι είναι ή συνιστούν νομική ή άλλη επαγγελματική συμβουλή και δεν πρέπει να προβληθεί %1$s ούτε και ο πάροχος της εφαρμογής ως τέτοια.</string>
 </resources>
