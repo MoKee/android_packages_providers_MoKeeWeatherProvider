@@ -16,10 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKeeHava</string>
   <string name="prefscreen_category_about_title">Hakkında</string>
+  <string name="aqi">Hava</string>
+  <string name="aqi_level_1">Iyi</string>
   <string name="aqi_level_2">Asistan</string>
+  <string name="aqi_level_3">Hassas Gruplar İçin Sağlıksız</string>
+  <string name="aqi_level_4">Sağlıksız</string>
+  <string name="aqi_level_5">Çok sağlıksız</string>
+  <string name="aqi_level_6">Tehlikeli</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Düşük</string>
   <string name="uv_level_2">Asistan</string>
+  <string name="uv_level_3">Yüksek</string>
+  <string name="uv_level_4">Çok yüksek</string>
   <string name="uv_level_5">Aşırı</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Yasal uyarı</string>
+  <string name="prefscreen_copyright_summary">Bu başvuru tarafından sağlanan bilgiler sadece genel bilgi amaçlı verilmiştir ve yasal veya diğer profesyonel tavsiyeleri teşkil etmediğini ve %1$s ile bu başvurunun sağlayıcıya dayanmadığını belirtti.</string>
 </resources>
