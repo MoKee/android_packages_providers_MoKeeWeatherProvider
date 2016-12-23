@@ -18,11 +18,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="prefscreen_category_about_title">Over</string>
   <string name="aqi">AIR</string>
+  <string name="aqi_level_1">Goed</string>
   <string name="aqi_level_2">Gemiddeld</string>
   <string name="aqi_level_3">Ongezond voor gevoelige groepen</string>
+  <string name="aqi_level_4">Ongezond</string>
   <string name="aqi_level_5">Heel Ongezond</string>
   <string name="aqi_level_6">Gevaarlijke</string>
   <string name="uv">UV</string>
+  <string name="uv_level_1">Laag</string>
   <string name="uv_level_2">Gemiddeld</string>
   <string name="uv_level_3">Hoog</string>
   <string name="uv_level_4">Zeer hoog</string>
