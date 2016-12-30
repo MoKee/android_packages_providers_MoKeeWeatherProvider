@@ -20,18 +20,18 @@
   <string name="prefscreen_category_about_title">Про додаток</string>
   <string name="aqi">ПОВІТРЯ</string>
   <string name="aqi_level_1">Добре</string>
-  <string name="aqi_level_2">Досвідчений</string>
+  <string name="aqi_level_2">Помірний</string>
   <string name="aqi_level_3">Шкідливо для чутливих груп</string>
   <string name="aqi_level_4">Нездоровий</string>
   <string name="aqi_level_5">Дуже шкідливо</string>
   <string name="aqi_level_6">Небезпечно</string>
   <string name="uv">УФ</string>
   <string name="uv_level_1">Низький</string>
-  <string name="uv_level_2">Досвідчений</string>
+  <string name="uv_level_2">Помірний</string>
   <string name="uv_level_3">Високий</string>
   <string name="uv_level_4">Дуже високий</string>
   <string name="uv_level_5">Максимум</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Умови використання</string>
-  <string name="prefscreen_copyright_summary">Інформація, надана цією програмою показана тільки для ознайомлення і не претендує бути повною істиною або порадою від спеціаліста, і не відноситься до %1$s чи до того, хто надав цю програму як такого.</string>
+  <string name="prefscreen_copyright_summary">Інформація, надана цим додатком призначена тільки для ознайомлення і не претендує бути повною істиною або порадою від спеціаліста, і не відноситься до %1$s чи до того, хто надав цей додаток як такий.</string>
 </resources>
