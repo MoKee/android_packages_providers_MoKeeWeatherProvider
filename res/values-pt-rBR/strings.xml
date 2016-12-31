@@ -16,12 +16,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKeeWeather</string>
   <string name="prefscreen_category_about_title">Sobre</string>
   <string name="aqi">AR</string>
   <string name="aqi_level_1">Bom</string>
   <string name="aqi_level_2">Moderado</string>
-  <string name="aqi_level_3">Ruim para grupos sensíveis</string>
-  <string name="aqi_level_4">Ruim</string>
+  <string name="aqi_level_3">Insalubre para grupos sensíveis</string>
+  <string name="aqi_level_4">Insalubre</string>
   <string name="aqi_level_5">Muito ruim</string>
   <string name="aqi_level_6">Perigosa</string>
   <string name="uv">UV</string>
