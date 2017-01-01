@@ -33,5 +33,5 @@
   <string name="uv_level_5">极端</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">免责声明</string>
-  <string name="prefscreen_copyright_summary">此应用程序所提供的资料只供一般参考提供不自称是或构成法律或其它专业建议和不能依靠 %1$s 也因此此应用程序的提供程序。</string>
+  <string name="prefscreen_copyright_summary">此应用所提供的资料仅供一般参考用途，并不代表作出法律上的或者其他的专业建议。 %1$s 将不会承担任何因直接或间接使用或依靠上述资料而导致的损失或损害。</string>
 </resources>
