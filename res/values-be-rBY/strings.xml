@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKeeНадвор\'е</string>
   <string name="prefscreen_category_about_title">Аб праграме</string>
   <string name="aqi">Паветра</string>
   <string name="aqi_level_1">Добра</string>
