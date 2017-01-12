@@ -24,7 +24,7 @@
   <string name="aqi_level_4">Niezdrowe</string>
   <string name="aqi_level_5">Bardzo niezdrowe</string>
   <string name="aqi_level_6">Niebezpieczne</string>
-  <string name="uv">UV</string>
+  <string name="uv">Ultrafiolet</string>
   <string name="uv_level_1">Nisko</string>
   <string name="uv_level_2">Standardowy</string>
   <string name="uv_level_3">Wysoka</string>
