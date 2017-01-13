@@ -16,21 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKeeWeather</string>
   <string name="prefscreen_category_about_title">O</string>
   <string name="aqi">Powietrze</string>
   <string name="aqi_level_1">Dobrze</string>
-  <string name="aqi_level_2">Standardowy</string>
+  <string name="aqi_level_2">Umiarkowanie</string>
   <string name="aqi_level_3">Niezdrowe dla wrażliwych osób</string>
   <string name="aqi_level_4">Niezdrowe</string>
   <string name="aqi_level_5">Bardzo niezdrowe</string>
   <string name="aqi_level_6">Niebezpieczne</string>
   <string name="uv">Ultrafiolet</string>
-  <string name="uv_level_1">Nisko</string>
-  <string name="uv_level_2">Standardowy</string>
-  <string name="uv_level_3">Wysoka</string>
-  <string name="uv_level_4">Bardzo wysoka</string>
-  <string name="uv_level_5">Mocna</string>
+  <string name="uv_level_1">Niski</string>
+  <string name="uv_level_2">Średni</string>
+  <string name="uv_level_3">Wysoki</string>
+  <string name="uv_level_4">Bardzo wysoki</string>
+  <string name="uv_level_5">Ekstremalny</string>
   <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Zrzeczenie się</string>
-  <string name="prefscreen_copyright_summary">Informacje dostarczone przez tę aplikację są świadczone tylko w celach informacyjnych i nie stanowią profesjonalnej porady prawnej lub innej, nie można powoływać się na %1$s, ani dostawce tej aplikacji jako tak.</string>
+  <string name="prefscreen_copyright_title">Odpowiedzialność autora</string>
+  <string name="prefscreen_copyright_summary">Informacje dostarczone przez tę aplikację są świadczone tylko w celach informacyjnych i nie stanowią profesjonalnej porady prawnej lub innej. Nie można powoływać się na %1$s ani na dostawcę tej aplikacji.</string>
 </resources>
