@@ -16,5 +16,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Om</string>
+  <string name="aqi">AIR</string>
+  <string name="aqi_level_1">Bra</string>
+  <string name="aqi_level_2">Måttlig</string>
+  <string name="aqi_level_4">Ohälsosamt</string>
+  <string name="aqi_level_5">Mycket ohälsosamt</string>
+  <string name="aqi_level_6">Farligt</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Låg</string>
+  <string name="uv_level_2">Måttlig</string>
+  <string name="uv_level_3">Hög</string>
+  <string name="uv_level_4">Mycket hög</string>
+  <string name="uv_level_5">Extrem</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Disclaimer</string>
 </resources>
