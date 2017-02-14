@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKeeWeather</string>
   <string name="prefscreen_category_about_title">Thông tin</string>
   <string name="aqi">MÁY</string>
   <string name="aqi_level_1">Tốt</string>
