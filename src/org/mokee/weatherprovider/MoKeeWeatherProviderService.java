@@ -57,13 +57,13 @@ public class MoKeeWeatherProviderService extends WeatherProviderService {
     private static final String TAG = MoKeeWeatherProviderService.class.getSimpleName();
     private static final boolean DEBUG = false;
 
-    private static final String MOKEE_API_MAIN_NODE = "MoKeeWeather data service 1.0";
+    private static final String MOKEE_API_MAIN_NODE = "MoKeeWeather data service 2.0";
 
     private static final String URL_PARAM_LATITUDE_LONGITUDE = "lat=%f&lon=%f";
     private static final String URL_PARAM_CITY_ID = "id=%s";
 
     private static final String URL_WEATHER =
-            "http://cloud.mokeedev.com/weather/getWeatherByCityID";
+            "http://cloud.mokeedev.com/weather/getWeatherByCityIDv2";
 
     private Map<ServiceRequest,WeatherUpdateRequestTask> mWeatherUpdateRequestMap = new HashMap<>();
     private Map<ServiceRequest,LookupCityNameRequestTask> mLookupCityRequestMap = new HashMap<>();
