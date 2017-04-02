@@ -16,17 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKee Прогноза</string>
   <string name="prefscreen_category_about_title">Относно</string>
   <string name="aqi">ВЪЗДУХ</string>
   <string name="aqi_level_1">Добър</string>
-  <string name="aqi_level_2">Средно напреднал</string>
+  <string name="aqi_level_2">Умерен</string>
   <string name="aqi_level_3">Нездравословно за чувствителни групи</string>
   <string name="aqi_level_4">Нездравословно</string>
   <string name="aqi_level_5">Много нездравословно</string>
   <string name="aqi_level_6">Опасни</string>
   <string name="uv">UV</string>
   <string name="uv_level_1">Ниско</string>
-  <string name="uv_level_2">Средно напреднал</string>
+  <string name="uv_level_2">Умерен</string>
   <string name="uv_level_3">Високо</string>
   <string name="uv_level_4">Много високо</string>
   <string name="uv_level_5">Екстремно</string>
