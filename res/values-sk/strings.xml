@@ -16,5 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Počasie MoKee</string>
+  <string name="prefscreen_category_about_title">O aplikaci</string>
+  <string name="aqi">AIR</string>
+  <string name="aqi_level_1">Dobré</string>
+  <string name="aqi_level_2">Stredné</string>
+  <string name="aqi_level_3">Nezdravé pre citlivé skupiny</string>
+  <string name="aqi_level_4">Nezdravé</string>
+  <string name="aqi_level_5">Veľmi nezdravé</string>
+  <string name="aqi_level_6">Nebezpečné</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Nizke</string>
+  <string name="uv_level_2">Stredné</string>
+  <string name="uv_level_3">Vysoké</string>
+  <string name="uv_level_4">Veľmi vysoké</string>
+  <string name="uv_level_5">Extrémne</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Prehlásenie</string>
+  <string name="prefscreen_copyright_summary">Informácie poskytované touto aplikáciou sú poskytované len na všeobecné informačné účely a nie sú zamýšľané ako právne alebo iné odborné poradenstvo. Nemali by ste sa spoliehať na %1$s, ani na poskytovateľa tejto aplikácie ako takého.</string>
 </resources>
