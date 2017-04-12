@@ -32,4 +32,5 @@
   <string name="uv_level_5">Extrémní</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Upozornění</string>
+  <string name="prefscreen_copyright_summary">Informace poskytované touto aplikací jsou poskytovány pouze pro obecné informační účely a nejsou zamýšlené jako právní nebo jiné odborné poradenství. Neměli byste se spoléhat na %1$s, ani na poskytovatele této aplikace jako takového.</string>
 </resources>
