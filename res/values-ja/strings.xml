@@ -16,5 +16,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">アプリについて</string>
+  <string name="aqi">空気</string>
+  <string name="aqi_level_1">グッド</string>
+  <string name="aqi_level_2">標準</string>
+  <string name="aqi_level_4">不健康</string>
+  <string name="aqi_level_5">非常に不健康</string>
+  <string name="aqi_level_6">危険</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">低め</string>
+  <string name="uv_level_2">標準</string>
+  <string name="uv_level_3">高め</string>
+  <string name="uv_level_4">非常に高い</string>
+  <string name="uv_level_5">最高</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">免責事項</string>
 </resources>

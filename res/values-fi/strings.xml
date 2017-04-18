@@ -16,5 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Tietoja</string>
+  <string name="aqi">ILMA</string>
+  <string name="aqi_level_1">Hyvä</string>
+  <string name="aqi_level_2">Kohtalainen</string>
+  <string name="aqi_level_3">Epäterveellinen erityisen herkille</string>
+  <string name="aqi_level_4">Epäterveellinen</string>
+  <string name="aqi_level_5">Hyvin epäterveellistä</string>
+  <string name="aqi_level_6">Vaarallista</string>
+  <string name="uv">UV</string>
+  <string name="uv_level_1">Matala</string>
+  <string name="uv_level_2">Kohtalainen</string>
+  <string name="uv_level_3">Korkea</string>
+  <string name="uv_level_4">Hyvin korkea</string>
+  <string name="uv_level_5">Äärimmäinen</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">Vastuuvapaus</string>
+  <string name="prefscreen_copyright_summary">Tämän sovelluksen tiedot on tarkoitettu vain yleiseksi informaatioksi ja ei vaadi mitään. Ei voida vedota %1$s eikä tämä sovellus tarjoa apua.</string>
 </resources>
