@@ -16,12 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">MoKeeWeather</string>
+  <string name="app_name">MoKee 天氣</string>
   <string name="prefscreen_category_about_title">關於</string>
   <string name="aqi">空氣質素</string>
   <string name="aqi_level_1">良好</string>
   <string name="aqi_level_2">中等</string>
-  <string name="aqi_level_3">輕度汚染</string>
+  <string name="aqi_level_3">不適於敏感人群</string>
   <string name="aqi_level_4">中度汚染</string>
   <string name="aqi_level_5">重度汚染</string>
   <string name="aqi_level_6">嚴重汚染</string>
