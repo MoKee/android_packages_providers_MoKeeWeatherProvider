@@ -16,5 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">موكي لطقس</string>
+  <string name="prefscreen_category_about_title">حول</string>
+  <string name="aqi">الهواء</string>
+  <string name="aqi_level_1">جيد</string>
+  <string name="aqi_level_2">معتدل</string>
+  <string name="aqi_level_3">غير صحي لفئات حساسة</string>
+  <string name="aqi_level_4">غير صحي</string>
+  <string name="aqi_level_5">غير صحي للغاية</string>
+  <string name="aqi_level_6">مضر</string>
+  <string name="uv">الأشعة فوق البنفسجية</string>
+  <string name="uv_level_1">منخفض</string>
+  <string name="uv_level_2">معتدل</string>
+  <string name="uv_level_3">مرتفع</string>
+  <string name="uv_level_4">عالي جداً</string>
+  <string name="uv_level_5">قصوى</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">إخلاء مسؤلية</string>
+  <string name="prefscreen_copyright_summary">المعلومات المقدمة من هذا التطبيق يتم توفيرها لأغراض المعلومات العامة فقط و ليست لغرض المطالبة بها او لغرض المشورة المهنية القانونية أو غيرها ويجب عدم الاعتماد على %1$s ولا الجهة التي توفر هذا التطبيق على هذا النحو.</string>
 </resources>
