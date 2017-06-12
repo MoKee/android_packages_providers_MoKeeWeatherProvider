@@ -16,6 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKeeの天気</string>
+  <string name="prefscreen_category_about_title">説明</string>
   <string name="aqi">空気</string>
   <string name="aqi_level_1">グッド</string>
   <string name="aqi_level_4">不健康</string>
