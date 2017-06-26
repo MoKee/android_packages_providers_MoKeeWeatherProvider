@@ -30,4 +30,6 @@
   <string name="uv_level_3">高め</string>
   <string name="uv_level_4">非常に高い</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">免責事項</string>
+  <string name="prefscreen_copyright_summary">このアプリケーションによって提供される情報は、一般的な情報目的のみのために提供されており、法的またはその他の専門的アドバイスであると主張するものではなく、%1$sにもこのアプリケーションのプロバイダとしても依存してはなりません。</string>
 </resources>
