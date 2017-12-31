@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Погода MoKee</string>
   <string name="prefscreen_category_about_title">Об этом</string>
-  <string name="aqi">Воздух</string>
+  <string name="aqi">AIR</string>
   <string name="aqi_level_1">Хороший</string>
   <string name="aqi_level_2">Умеренный</string>
   <string name="aqi_level_3">Вредный для чувствительных групп</string>
@@ -33,5 +33,5 @@
   <string name="uv_level_5">Максимум</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Условия предоставления</string>
-  <string name="prefscreen_copyright_summary">Информация, представленная этим приложением, предоставляется исключительно в ознакомительных целях и не претендует быть юридической или иной профессиональной консультацией. Вы не должны полагаться на %1$s, ни поставщика этого приложения как такового.</string>
+  <string name="prefscreen_copyright_summary">Информация, представленная этим приложением, предоставляется исключительно в ознакомительных целях и не претендует быть юридической или иной профессиональной консультацией. Вы не должны полагаться на %1$s, ни на поставщика этого приложения как такового.</string>
 </resources>
