@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">App_pangalan</string>
   <string name="prefscreen_category_about_title">Tungkol</string>
   <string name="aqi">AIR</string>
   <string name="aqi_level_1">Mabuti</string>
