@@ -21,6 +21,7 @@
   <string name="aqi_level_6">Perigoso</string>
   <string name="uv_level_2">Moderada</string>
   <string name="uv_level_3">Alto</string>
+  <string name="uv_level_5">Extremo</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Limitação de Responsabilidade</string>
 </resources>
