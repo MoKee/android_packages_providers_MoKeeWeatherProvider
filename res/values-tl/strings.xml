@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="prefscreen_category_about_title">Tungkol sa</string>
   <string name="aqi">HANGIN</string>
   <string name="aqi_level_1">Magaling</string>
   <string name="aqi_level_2">Katamtaman</string>
@@ -30,4 +31,5 @@
   <string name="uv_level_4">Napakataas</string>
   <string name="uv_level_5">Matindi</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_summary">Ang mga impormasyon na ibinibigay ng application na ito ay ibinibigay para sa pangkalahatang impormasyon na mga layunin lamang at hindi inaangkin na o naglalaman ng legal o iba pang mga propesyonal na payo at hindi dapat umasa sa %1$s o ang provider ng application na ito.</string>
 </resources>
