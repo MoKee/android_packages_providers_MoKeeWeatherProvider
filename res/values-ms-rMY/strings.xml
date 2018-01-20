@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">MoKee Cuaca</string>
   <string name="prefscreen_category_about_title">Tentang</string>
   <string name="aqi">Udara</string>
   <string name="aqi_level_1">Baik</string>
@@ -32,4 +33,5 @@
   <string name="uv_level_5">Melampau</string>
   <!-- Copyright and disclaimers -->
   <string name="prefscreen_copyright_title">Penafian</string>
+  <string name="prefscreen_copyright_summary">Informasi yang disedia oleh aplikasi ini hanya disediakan untuk tujuan informasi umum sahaja dan tidak boleh didakwa atau dijadikan sebagai undang-undang atau nasihat profesional lain dan tidak digantung kepada %1$s mahupun pembekal aplikasi ini.</string>
 </resources>
