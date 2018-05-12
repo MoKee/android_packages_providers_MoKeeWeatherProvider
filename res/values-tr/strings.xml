@@ -16,10 +16,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">MoKeeHava</string>
+  <string name="app_name">MoKee Hava Durumu</string>
   <string name="prefscreen_category_about_title">Hakkında</string>
   <string name="aqi">Hava</string>
-  <string name="aqi_level_1">Iyi</string>
+  <string name="aqi_level_1">İyi</string>
   <string name="aqi_level_2">Asistan</string>
   <string name="aqi_level_3">Hassas Gruplar İçin Sağlıksız</string>
   <string name="aqi_level_4">Sağlıksız</string>
