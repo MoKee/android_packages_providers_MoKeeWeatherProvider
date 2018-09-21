@@ -16,5 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="uv">UV</string>
+  <string name="uv_level_1">ಕಡಿಮೆ</string>
+  <string name="uv_level_2">ಮಧ್ಯಮ</string>
+  <string name="uv_level_3">ಹೆಚ್ಚು</string>
+  <string name="uv_level_4">ಅತೀ ಹೆಚ್ಚು</string>
+  <string name="uv_level_5">ಬಹಳ</string>
   <!-- Copyright and disclaimers -->
+  <string name="prefscreen_copyright_title">ಹಕ್ಕು ನಿರಾಕರಣೆ</string>
 </resources>
