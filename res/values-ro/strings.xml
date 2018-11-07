@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Mokee Meteo</string>
-  <string name="prefscreen_category_about_title">Despre</string>
-  <string name="aqi">AIR</string>
-  <string name="aqi_level_1">Bun</string>
-  <string name="aqi_level_2">Moderat</string>
-  <string name="aqi_level_3">Nesănătos pentru grupurile sensibile</string>
-  <string name="aqi_level_4">Nesănătoase</string>
-  <string name="aqi_level_5">Foarte nesănătoase</string>
-  <string name="aqi_level_6">Periculoase</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Scăzut</string>
-  <string name="uv_level_2">Moderat</string>
-  <string name="uv_level_3">Ridicat</string>
-  <string name="uv_level_4">Foarte Ridicat</string>
-  <string name="uv_level_5">Extrem</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Excluderea răspunderii</string>
-  <string name="prefscreen_copyright_summary">Informaţiile furnizate de această aplicaţie sunt numai în scopul informarii generale şi nu constituie sau pretinde a fi sfaturi juridice sau profesionale şi nici nu trebuie să nu fie invocată nici %1$s sau furnizorul aceastei aplicaţii ca atare.</string>
+    <string name="app_name">Mokee Meteo</string>
+    <string name="prefscreen_category_about_title">Despre</string>
+    <string name="aqi">AIR</string>
+    <string name="aqi_level_1">Bun</string>
+    <string name="aqi_level_2">Moderat</string>
+    <string name="aqi_level_3">Nesănătos pentru grupurile sensibile</string>
+    <string name="aqi_level_4">Nesănătoase</string>
+    <string name="aqi_level_5">Foarte nesănătoase</string>
+    <string name="aqi_level_6">Periculoase</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Scăzut</string>
+    <string name="uv_level_2">Moderat</string>
+    <string name="uv_level_3">Ridicat</string>
+    <string name="uv_level_4">Foarte Ridicat</string>
+    <string name="uv_level_5">Extrem</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Excluderea răspunderii</string>
+    <string name="prefscreen_copyright_summary">Informaţiile furnizate de această aplicaţie sunt numai în scopul informarii generale şi nu constituie sau pretinde a fi sfaturi juridice sau profesionale şi nici nu trebuie să nu fie invocată nici %1$s sau furnizorul aceastei aplicaţii ca atare.</string>
 </resources>

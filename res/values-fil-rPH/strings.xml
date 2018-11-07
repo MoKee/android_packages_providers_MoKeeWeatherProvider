@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">App_pangalan</string>
-  <string name="prefscreen_category_about_title">Tungkol</string>
-  <string name="aqi">AIR</string>
-  <string name="aqi_level_1">Mabuti</string>
-  <string name="aqi_level_2">Katamtaman</string>
-  <string name="aqi_level_3">Hindi maganda para sa mga Sensitibong Grupo</string>
-  <string name="aqi_level_4">Hindi maganda</string>
-  <string name="aqi_level_5">Lubhang hindi maganda</string>
-  <string name="aqi_level_6">Mapanganib</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Mababa</string>
-  <string name="uv_level_2">Katamtaman</string>
-  <string name="uv_level_3">Mataas</string>
-  <string name="uv_level_4">Napakataas</string>
-  <string name="uv_level_5">Matindi</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Disclaimer</string>
-  <string name="prefscreen_copyright_summary">Ang impormasyong ibinigay ng aplikasyon na ito ay ibinigay lamang para sa pangkahalatang mga layunin ng impormasyon at hindi inaangkin na o bumubuo ng legal o iba pang propesyonal na payo at hindi dapat umasa sa %1$s o ang tagabigay ng aplikasyon na ito.</string>
+    <string name="app_name">App_pangalan</string>
+    <string name="prefscreen_category_about_title">Tungkol</string>
+    <string name="aqi">AIR</string>
+    <string name="aqi_level_1">Mabuti</string>
+    <string name="aqi_level_2">Katamtaman</string>
+    <string name="aqi_level_3">Hindi maganda para sa mga Sensitibong Grupo</string>
+    <string name="aqi_level_4">Hindi maganda</string>
+    <string name="aqi_level_5">Lubhang hindi maganda</string>
+    <string name="aqi_level_6">Mapanganib</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Mababa</string>
+    <string name="uv_level_2">Katamtaman</string>
+    <string name="uv_level_3">Mataas</string>
+    <string name="uv_level_4">Napakataas</string>
+    <string name="uv_level_5">Matindi</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Disclaimer</string>
+    <string name="prefscreen_copyright_summary">Ang impormasyong ibinigay ng aplikasyon na ito ay ibinigay lamang para sa pangkahalatang mga layunin ng impormasyon at hindi inaangkin na o bumubuo ng legal o iba pang propesyonal na payo at hindi dapat umasa sa %1$s o ang tagabigay ng aplikasyon na ito.</string>
 </resources>

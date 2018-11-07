@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Počasí MoKee</string>
-  <string name="prefscreen_category_about_title">O</string>
-  <string name="aqi">AIR</string>
-  <string name="aqi_level_1">Dobrý</string>
-  <string name="aqi_level_2">Moderovat</string>
-  <string name="aqi_level_3">Nezdravé pro citlivé skupiny</string>
-  <string name="aqi_level_4">Nezdravé</string>
-  <string name="aqi_level_5">Velmi nezdravé</string>
-  <string name="aqi_level_6">Nebezpečné</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Nízká</string>
-  <string name="uv_level_2">Moderovat</string>
-  <string name="uv_level_3">Vysoký</string>
-  <string name="uv_level_4">Velmi vysoká</string>
-  <string name="uv_level_5">Extrémní</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Upozornění</string>
-  <string name="prefscreen_copyright_summary">Informace poskytované touto aplikací jsou poskytovány pouze pro obecné informační účely a nejsou zamýšlené jako právní nebo jiné odborné poradenství. Neměli byste se spoléhat na %1$s, ani na poskytovatele této aplikace jako takového.</string>
+    <string name="app_name">Počasí MoKee</string>
+    <string name="prefscreen_category_about_title">O</string>
+    <string name="aqi">AIR</string>
+    <string name="aqi_level_1">Dobrý</string>
+    <string name="aqi_level_2">Moderovat</string>
+    <string name="aqi_level_3">Nezdravé pro citlivé skupiny</string>
+    <string name="aqi_level_4">Nezdravé</string>
+    <string name="aqi_level_5">Velmi nezdravé</string>
+    <string name="aqi_level_6">Nebezpečné</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Nízká</string>
+    <string name="uv_level_2">Moderovat</string>
+    <string name="uv_level_3">Vysoký</string>
+    <string name="uv_level_4">Velmi vysoká</string>
+    <string name="uv_level_5">Extrémní</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Upozornění</string>
+    <string name="prefscreen_copyright_summary">Informace poskytované touto aplikací jsou poskytovány pouze pro obecné informační účely a nejsou zamýšlené jako právní nebo jiné odborné poradenství. Neměli byste se spoléhat na %1$s, ani na poskytovatele této aplikace jako takového.</string>
 </resources>

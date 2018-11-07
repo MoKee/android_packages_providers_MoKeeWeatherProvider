@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Meteo Mokee</string>
-  <string name="prefscreen_category_about_title">Riguardo a</string>
-  <string name="aqi">ARIA</string>
-  <string name="aqi_level_1">Buona</string>
-  <string name="aqi_level_2">Moderata</string>
-  <string name="aqi_level_3">Pericoloso per gruppi sensibili</string>
-  <string name="aqi_level_4">Pericoloso</string>
-  <string name="aqi_level_5">Molto pericoloso</string>
-  <string name="aqi_level_6">Rischioso</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Basso</string>
-  <string name="uv_level_2">Moderato</string>
-  <string name="uv_level_3">Alto</string>
-  <string name="uv_level_4">Molto alto</string>
-  <string name="uv_level_5">Estremo</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Dichiarazione di limitazione di responsabilità</string>
-  <string name="prefscreen_copyright_summary">Le informazioni fornite da questa applicazione sono fornite unicamente per informazioni generali e non hanno la pretesa di essere o costituiscono consulenza legale o professionale e non devono essere presi in considerazione %1$s, né il fornitore di questa applicazione in quanto tale.</string>
+    <string name="app_name">Meteo Mokee</string>
+    <string name="prefscreen_category_about_title">Riguardo a</string>
+    <string name="aqi">ARIA</string>
+    <string name="aqi_level_1">Buona</string>
+    <string name="aqi_level_2">Moderata</string>
+    <string name="aqi_level_3">Pericoloso per gruppi sensibili</string>
+    <string name="aqi_level_4">Pericoloso</string>
+    <string name="aqi_level_5">Molto pericoloso</string>
+    <string name="aqi_level_6">Rischioso</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Basso</string>
+    <string name="uv_level_2">Moderato</string>
+    <string name="uv_level_3">Alto</string>
+    <string name="uv_level_4">Molto alto</string>
+    <string name="uv_level_5">Estremo</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Dichiarazione di limitazione di responsabilità</string>
+    <string name="prefscreen_copyright_summary">Le informazioni fornite da questa applicazione sono fornite unicamente per informazioni generali e non hanno la pretesa di essere o costituiscono consulenza legale o professionale e non devono essere presi in considerazione %1$s, né il fornitore di questa applicazione in quanto tale.</string>
 </resources>

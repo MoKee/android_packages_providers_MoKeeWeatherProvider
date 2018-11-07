@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">MoKeeWeather</string>
-  <string name="prefscreen_category_about_title">Tentang</string>
-  <string name="aqi">UDARA</string>
-  <string name="aqi_level_1">Baik</string>
-  <string name="aqi_level_2">Sedang</string>
-  <string name="aqi_level_3">Tidak sehat bagi kelompok yang sensitif</string>
-  <string name="aqi_level_4">Tidak sehat</string>
-  <string name="aqi_level_5">Sangat tidak sehat</string>
-  <string name="aqi_level_6">Berbahaya</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Rendah</string>
-  <string name="uv_level_2">Sedang</string>
-  <string name="uv_level_3">Tinggi</string>
-  <string name="uv_level_4">Sangat tinggi</string>
-  <string name="uv_level_5">Ekstrim</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Penolakan</string>
-  <string name="prefscreen_copyright_summary">Informasi yang disediakan oleh aplikasi ini disediakan untuk tujuan informasi umum saja dan tidak mengklaim atau merupakan hukum atau nasihat profesional lainnya dan tidak dapat diandalkan atas %1$s maupun penyedia aplikasi ini.</string>
+    <string name="app_name">MoKeeWeather</string>
+    <string name="prefscreen_category_about_title">Tentang</string>
+    <string name="aqi">UDARA</string>
+    <string name="aqi_level_1">Baik</string>
+    <string name="aqi_level_2">Sedang</string>
+    <string name="aqi_level_3">Tidak sehat bagi kelompok yang sensitif</string>
+    <string name="aqi_level_4">Tidak sehat</string>
+    <string name="aqi_level_5">Sangat tidak sehat</string>
+    <string name="aqi_level_6">Berbahaya</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Rendah</string>
+    <string name="uv_level_2">Sedang</string>
+    <string name="uv_level_3">Tinggi</string>
+    <string name="uv_level_4">Sangat tinggi</string>
+    <string name="uv_level_5">Ekstrim</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Penolakan</string>
+    <string name="prefscreen_copyright_summary">Informasi yang disediakan oleh aplikasi ini disediakan untuk tujuan informasi umum saja dan tidak mengklaim atau merupakan hukum atau nasihat profesional lainnya dan tidak dapat diandalkan atas %1$s maupun penyedia aplikasi ini.</string>
 </resources>

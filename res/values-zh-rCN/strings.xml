@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">魔趣天气</string>
-  <string name="prefscreen_category_about_title">关于</string>
-  <string name="aqi">空气质量</string>
-  <string name="aqi_level_1">优</string>
-  <string name="aqi_level_2">良</string>
-  <string name="aqi_level_3">轻度污染</string>
-  <string name="aqi_level_4">中度污染</string>
-  <string name="aqi_level_5">重度污染</string>
-  <string name="aqi_level_6">严重污染</string>
-  <string name="uv">紫外线</string>
-  <string name="uv_level_1">低</string>
-  <string name="uv_level_2">中等</string>
-  <string name="uv_level_3">高</string>
-  <string name="uv_level_4">非常高</string>
-  <string name="uv_level_5">极端</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">免责声明</string>
-  <string name="prefscreen_copyright_summary">此应用所提供的资料仅供一般参考用途，并不代表作出法律上的或者其他的专业建议。 %1$s 将不会承担任何因直接或间接使用或依靠上述资料而导致的损失或损害。</string>
+    <string name="app_name">魔趣天气</string>
+    <string name="prefscreen_category_about_title">关于</string>
+    <string name="aqi">空气质量</string>
+    <string name="aqi_level_1">优</string>
+    <string name="aqi_level_2">良</string>
+    <string name="aqi_level_3">轻度污染</string>
+    <string name="aqi_level_4">中度污染</string>
+    <string name="aqi_level_5">重度污染</string>
+    <string name="aqi_level_6">严重污染</string>
+    <string name="uv">紫外线</string>
+    <string name="uv_level_1">低</string>
+    <string name="uv_level_2">中等</string>
+    <string name="uv_level_3">高</string>
+    <string name="uv_level_4">非常高</string>
+    <string name="uv_level_5">极端</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">免责声明</string>
+    <string name="prefscreen_copyright_summary">此应用所提供的资料仅供一般参考用途，并不代表作出法律上的或者其他的专业建议。 %1$s 将不会承担任何因直接或间接使用或依靠上述资料而导致的损失或损害。</string>
 </resources>

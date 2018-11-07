@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">MoKeeWeather</string>
-  <string name="prefscreen_category_about_title">Sobre</string>
-  <string name="aqi">AR</string>
-  <string name="aqi_level_1">Bom</string>
-  <string name="aqi_level_2">Moderado</string>
-  <string name="aqi_level_3">Ruim para grupos sensíveis</string>
-  <string name="aqi_level_4">Insalubre</string>
-  <string name="aqi_level_5">Muito ruim</string>
-  <string name="aqi_level_6">Perigosa</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Baixa</string>
-  <string name="uv_level_2">Moderado</string>
-  <string name="uv_level_3">Alta</string>
-  <string name="uv_level_4">Muito alto</string>
-  <string name="uv_level_5">Extremo</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Aviso legal</string>
-  <string name="prefscreen_copyright_summary">As informações fornecidas por este aplicativo são fornecidas apenas para fins informativos gerais e não tem a pretensão de ser ou constituir conselhos profissionais legais ou outros e não devem ser confiadas %1$s, nem o provedor desta aplicação como tal.</string>
+    <string name="app_name">MoKeeWeather</string>
+    <string name="prefscreen_category_about_title">Sobre</string>
+    <string name="aqi">AR</string>
+    <string name="aqi_level_1">Bom</string>
+    <string name="aqi_level_2">Moderado</string>
+    <string name="aqi_level_3">Ruim para grupos sensíveis</string>
+    <string name="aqi_level_4">Insalubre</string>
+    <string name="aqi_level_5">Muito ruim</string>
+    <string name="aqi_level_6">Perigosa</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Baixa</string>
+    <string name="uv_level_2">Moderado</string>
+    <string name="uv_level_3">Alta</string>
+    <string name="uv_level_4">Muito alto</string>
+    <string name="uv_level_5">Extremo</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Aviso legal</string>
+    <string name="prefscreen_copyright_summary">As informações fornecidas por este aplicativo são fornecidas apenas para fins informativos gerais e não tem a pretensão de ser ou constituir conselhos profissionais legais ou outros e não devem ser confiadas %1$s, nem o provedor desta aplicação como tal.</string>
 </resources>

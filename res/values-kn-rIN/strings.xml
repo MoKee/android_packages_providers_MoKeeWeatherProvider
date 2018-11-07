@@ -16,19 +16,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">MoKee ವಾತಾವರಣ</string>
-  <string name="prefscreen_category_about_title">ಕುರಿತು</string>
-  <string name="aqi_level_1">ಉತ್ತಮ</string>
-  <string name="aqi_level_2">ಮಧ್ಯಮ</string>
-  <string name="aqi_level_4">ಅನಾರೋಗ್ಯಕರ</string>
-  <string name="aqi_level_5">ತೀವ್ರ ಅನಾರೋಗ್ಯಕರ</string>
-  <string name="aqi_level_6">ಅಪಾಯಕಾರಿ</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">ಕಡಿಮೆ</string>
-  <string name="uv_level_2">ಮಧ್ಯಮ</string>
-  <string name="uv_level_3">ಹೆಚ್ಚು</string>
-  <string name="uv_level_4">ಅತೀ ಹೆಚ್ಚು</string>
-  <string name="uv_level_5">ಬಹಳ</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">ಹಕ್ಕು ನಿರಾಕರಣೆ</string>
+    <string name="app_name">MoKee ವಾತಾವರಣ</string>
+    <string name="prefscreen_category_about_title">ಕುರಿತು</string>
+    <string name="aqi_level_1">ಉತ್ತಮ</string>
+    <string name="aqi_level_2">ಮಧ್ಯಮ</string>
+    <string name="aqi_level_4">ಅನಾರೋಗ್ಯಕರ</string>
+    <string name="aqi_level_5">ತೀವ್ರ ಅನಾರೋಗ್ಯಕರ</string>
+    <string name="aqi_level_6">ಅಪಾಯಕಾರಿ</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">ಕಡಿಮೆ</string>
+    <string name="uv_level_2">ಮಧ್ಯಮ</string>
+    <string name="uv_level_3">ಹೆಚ್ಚು</string>
+    <string name="uv_level_4">ಅತೀ ಹೆಚ್ಚು</string>
+    <string name="uv_level_5">ಬಹಳ</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">ಹಕ್ಕು ನಿರಾಕರಣೆ</string>
 </resources>

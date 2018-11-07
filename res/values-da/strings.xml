@@ -16,21 +16,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="prefscreen_category_about_title">Om</string>
-  <string name="aqi">LUFT</string>
-  <string name="aqi_level_1">God</string>
-  <string name="aqi_level_2">Moderat</string>
-  <string name="aqi_level_3">Usund for følsomme grupper</string>
-  <string name="aqi_level_4">Usundt</string>
-  <string name="aqi_level_5">Meget usund</string>
-  <string name="aqi_level_6">Farlige</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Lav</string>
-  <string name="uv_level_2">Moderat</string>
-  <string name="uv_level_3">Høj</string>
-  <string name="uv_level_4">Meget høj</string>
-  <string name="uv_level_5">Ekstrem</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Ansvarsfraskrivelse</string>
-  <string name="prefscreen_copyright_summary">De i denne app tilgængeliggjorte oplysninger er alene tilsigtet en generel orientering og foregiver ikke at være, ej heller at udgøre, juridisk eller anden professionel rådgivning og skal ikke påberåbes %1$s eller udbyderen af denne ansøgning som sådan.</string>
+    <string name="prefscreen_category_about_title">Om</string>
+    <string name="aqi">LUFT</string>
+    <string name="aqi_level_1">God</string>
+    <string name="aqi_level_2">Moderat</string>
+    <string name="aqi_level_3">Usund for følsomme grupper</string>
+    <string name="aqi_level_4">Usundt</string>
+    <string name="aqi_level_5">Meget usund</string>
+    <string name="aqi_level_6">Farlige</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Lav</string>
+    <string name="uv_level_2">Moderat</string>
+    <string name="uv_level_3">Høj</string>
+    <string name="uv_level_4">Meget høj</string>
+    <string name="uv_level_5">Ekstrem</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Ansvarsfraskrivelse</string>
+    <string name="prefscreen_copyright_summary">De i denne app tilgængeliggjorte oplysninger er alene tilsigtet en generel orientering og foregiver ikke at være, ej heller at udgøre, juridisk eller anden professionel rådgivning og skal ikke påberåbes %1$s eller udbyderen af denne ansøgning som sådan.</string>
 </resources>

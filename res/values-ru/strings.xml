@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Погода MoKee</string>
-  <string name="prefscreen_category_about_title">Подробнее</string>
-  <string name="aqi">AIR</string>
-  <string name="aqi_level_1">Хороший</string>
-  <string name="aqi_level_2">Умеренный</string>
-  <string name="aqi_level_3">Вредный для чувствительных групп</string>
-  <string name="aqi_level_4">Небезопасный</string>
-  <string name="aqi_level_5">Очень небезопасный</string>
-  <string name="aqi_level_6">Опасный</string>
-  <string name="uv">УФ-индекс</string>
-  <string name="uv_level_1">Низкий</string>
-  <string name="uv_level_2">Умеренный</string>
-  <string name="uv_level_3">Высокий</string>
-  <string name="uv_level_4">Очень высокий</string>
-  <string name="uv_level_5">Максимум</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Условия предоставления</string>
-  <string name="prefscreen_copyright_summary">Информация, представленная этим приложением, предоставляется исключительно в ознакомительных целях и не претендует быть юридической или иной профессиональной консультацией. Вы не должны полагаться на %1$s, ни на поставщика этого приложения как такового.</string>
+    <string name="app_name">Погода MoKee</string>
+    <string name="prefscreen_category_about_title">Подробнее</string>
+    <string name="aqi">AIR</string>
+    <string name="aqi_level_1">Хороший</string>
+    <string name="aqi_level_2">Умеренный</string>
+    <string name="aqi_level_3">Вредный для чувствительных групп</string>
+    <string name="aqi_level_4">Небезопасный</string>
+    <string name="aqi_level_5">Очень небезопасный</string>
+    <string name="aqi_level_6">Опасный</string>
+    <string name="uv">УФ-индекс</string>
+    <string name="uv_level_1">Низкий</string>
+    <string name="uv_level_2">Умеренный</string>
+    <string name="uv_level_3">Высокий</string>
+    <string name="uv_level_4">Очень высокий</string>
+    <string name="uv_level_5">Максимум</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Условия предоставления</string>
+    <string name="prefscreen_copyright_summary">Информация, представленная этим приложением, предоставляется исключительно в ознакомительных целях и не претендует быть юридической или иной профессиональной консультацией. Вы не должны полагаться на %1$s, ни на поставщика этого приложения как такового.</string>
 </resources>

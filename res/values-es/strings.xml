@@ -16,22 +16,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">TiempoMoKee</string>
-  <string name="prefscreen_category_about_title">Acerca de</string>
-  <string name="aqi">AIRE</string>
-  <string name="aqi_level_1">Bueno</string>
-  <string name="aqi_level_2">Moderado</string>
-  <string name="aqi_level_3">Insalubre para grupos sensibles</string>
-  <string name="aqi_level_4">Poco saludable</string>
-  <string name="aqi_level_5">Muy poco saludable</string>
-  <string name="aqi_level_6">Tóxico</string>
-  <string name="uv">UV</string>
-  <string name="uv_level_1">Baja</string>
-  <string name="uv_level_2">Moderado</string>
-  <string name="uv_level_3">Alta</string>
-  <string name="uv_level_4">Muy alta</string>
-  <string name="uv_level_5">Extremo</string>
-  <!-- Copyright and disclaimers -->
-  <string name="prefscreen_copyright_title">Aviso</string>
-  <string name="prefscreen_copyright_summary">La información facilitada por esta aplicación se proporciona sólo con fines de información general y no pretende ser o constituir asesoramiento legal o profesional y no se debe confiar en %1$s ni el proveedor de esta aplicación como tal.</string>
+    <string name="app_name">TiempoMoKee</string>
+    <string name="prefscreen_category_about_title">Acerca de</string>
+    <string name="aqi">AIRE</string>
+    <string name="aqi_level_1">Bueno</string>
+    <string name="aqi_level_2">Moderado</string>
+    <string name="aqi_level_3">Insalubre para grupos sensibles</string>
+    <string name="aqi_level_4">Poco saludable</string>
+    <string name="aqi_level_5">Muy poco saludable</string>
+    <string name="aqi_level_6">Tóxico</string>
+    <string name="uv">UV</string>
+    <string name="uv_level_1">Baja</string>
+    <string name="uv_level_2">Moderado</string>
+    <string name="uv_level_3">Alta</string>
+    <string name="uv_level_4">Muy alta</string>
+    <string name="uv_level_5">Extremo</string>
+    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_copyright_title">Aviso</string>
+    <string name="prefscreen_copyright_summary">La información facilitada por esta aplicación se proporciona sólo con fines de información general y no pretende ser o constituir asesoramiento legal o profesional y no se debe confiar en %1$s ni el proveedor de esta aplicación como tal.</string>
 </resources>
